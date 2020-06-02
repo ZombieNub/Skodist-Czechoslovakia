@@ -80,8 +80,7 @@
   #CZE_fascism_more_popularity_effects_desc:0 "The freedom of the business is paramount to Skodism, and as such includes freedom of the journalist companies. While this makes our efforts towards stabilization harder, they have made strong innovations. We shall create our own news agency, and promote the ideals and defense of Skodism to the wider population, and urge them where necessary."
   CZE_fascism_the_global_market:0 "The Global Market"
   CZE_fascism_the_global_market_desc:0 "The world is filled to the brim with luxuries just waiting to be purchased, but the selfish desires of the mercantilists and communists wish to keep these all to themselves. Enough of this petty greed! Enough of this waste of luxuries! It is the duty of our militias and paramilitaries to march forth, and spread the Skodist market all across the world!"
-
-  #communism
+  CZE_fascism_the_global_market_tooltip:0 "Enables influencing states that border our cores, allowing us to turn them into our cores.\nIf our cores exist in foreign states, this will §Genable resistance activity.§!"
   CZE_politics_skodism_communism:0 "End Fascist Paramilitaries"
   CZE_politics_skodism_communism_desc:0 "The Paramilitaries that so helpfuly aided us back when the revolution was beginning are now turning against the government to justify their own existance. This betrayal of skodism shall not stand! Henceforth, fascist elements across Czechoslovakia are to be elminated, and we are to begin the Skodist Revolution in full!"
   CZE_politics_skodism_communism_trigger:0 "§RParamilitaries crushed by Student Groups§!"
