@@ -954,7 +954,19 @@ focus_tree = {
 	focus = {
 		id = CZE_fascism_the_global_market
 		icon = GFX_focus_spr_anarchism_knows_no_borders
-		
+		x = 22
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+
+		}
+		completion_reward = {
+			custom_effect_tooltip = CZE_fascism_the_global_market_tooltip
+		}
 	}
 
 	#Communism

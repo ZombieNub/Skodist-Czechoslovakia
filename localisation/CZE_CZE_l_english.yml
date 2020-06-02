@@ -74,10 +74,12 @@
   CZE_fascism_internal_security:0 "Skodist Internal Security Corporation"
   CZE_fascism_internal_security_desc:0 "The civilian and elite elements of Czechoslovakia may have been made irrelevent, but they aren't gone completely. We must establish a new company to investigate both vanguards and ex-officers to make sure we aren't being undermined from within. Those who we know to be legitimate can be put into strong posistions of power, and influence our country in great ways."
   CZE_fascism_internal_security_tooltip:0 "Allows you to conduct investigations into the loyalties of vanguards and ex-officers, and decrease their popularities.\nFascism popularity increases §Gpolitical power gain§! and §Gmobilization speed§! at the cost of §Rresistance growth speed§!.\nNeutrality popularity increases §Garmy experience§! and §Gmax planning§! at the cost of §Rstability§!."
-  CZE_fascism_popularity_effects:0 "Department Of Military Affairs"
-  CZE_fascism_popularity_effects_desc:0 "With the internal security taken care of, we are now facing the question of the armed forces. To bolster our defensive efforts, we shall establish the Department of Military Affairs, and have both paramilitaries and militias be under their direction. Naturally, the vanguards and ex-officers will be competing for influence and funding, so this current political split will become ever more relevant."
-  CZE_fascism_more_popularity_effects:0 "All-Skodism Press Corporation"
-  CZE_fascism_more_popularity_effects_desc:0 "The freedom of the business is paramount to Skodism, and as such includes freedom of the journalist companies. While this makes our efforts towards stabilization harder, they have made strong innovations. We shall create our own news agency, and promote the ideals and defense of Skodism to the wider population, and urge them where necessary."
+  #CZE_fascism_popularity_effects:0 "Department Of Military Affairs"
+  #CZE_fascism_popularity_effects_desc:0 "With the internal security taken care of, we are now facing the question of the armed forces. To bolster our defensive efforts, we shall establish the Department of Military Affairs, and have both paramilitaries and militias be under their direction. Naturally, the vanguards and ex-officers will be competing for influence and funding, so this current political split will become ever more relevant."
+  #CZE_fascism_more_popularity_effects:0 "All-Skodism Press Corporation"
+  #CZE_fascism_more_popularity_effects_desc:0 "The freedom of the business is paramount to Skodism, and as such includes freedom of the journalist companies. While this makes our efforts towards stabilization harder, they have made strong innovations. We shall create our own news agency, and promote the ideals and defense of Skodism to the wider population, and urge them where necessary."
+  CZE_fascism_the_global_market:0 "The Global Market"
+  CZE_fascism_the_global_market_desc:0 "The world is filled to the brim with luxuries just waiting to be purchased, but the selfish desires of the mercantilists and communists wish to keep these all to themselves. Enough of this petty greed! Enough of this waste of luxuries! It is the duty of our militias and paramilitaries to march forth, and spread the Skodist market all across the world!"
 
   #communism
   CZE_politics_skodism_communism:0 "End Fascist Paramilitaries"
