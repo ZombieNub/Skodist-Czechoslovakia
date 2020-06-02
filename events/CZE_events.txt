@@ -1,0 +1,316 @@
+add_namespace = skodism
+
+country_event = {
+	id = skodism.1 # Intro Event
+	title = skodism.1.t
+	desc = skodism.1.d
+
+	picture = GFX_report_event_chamberlain
+
+	is_triggered_only = yes
+
+	option = {
+		name = skodism.1.a
+	}
+}
+
+country_event = {
+	id = skodism.2 # Stirrings Of Resentment
+	title = skodism.2.t
+	desc = skodism.2.d
+
+	picture = GFX_report_event_french_resistance_02
+
+	is_triggered_only = yes
+
+	option = {
+		name = skodism.2.a
+		hidden_effect = {
+			country_event = {
+			    id = skodism.3
+			    days = 0
+			    random = 0
+			}
+		}
+	}
+	option = {
+		name = skodism.2.b
+		hidden_effect = {
+			country_event = {
+			    id = skodism.5
+			    days = 0
+			    random = 0
+			}
+		}
+	}
+}
+
+country_event = {
+	id = skodism.3 # Civilian Government Working With Z Conspiracy
+	title = skodism.3.t
+	desc = skodism.3.d
+
+	picture = GFX_report_event_finnish_letter
+
+	is_triggered_only = yes
+
+	option = {
+		name = skodism.3.a
+		hidden_effect = {
+			country_event = {
+			    id = skodism.4
+			    days = 0
+			    random = 0
+			}
+		}
+	}
+	option = {
+		name = skodism.3.b
+		hidden_effect = {
+			country_event = {
+			    id = skodism.4
+			    days = 0
+			    random = 0
+			}
+		}
+	}
+}
+
+country_event = {
+	id = skodism.4 # Paramilitaries March On Prague
+	title = skodism.4.t
+	desc = skodism.4.d
+
+	picture = GFX_report_event_generic_military_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = skodism.4.a
+		set_country_flag = fascist_CZE
+		every_owned_state = {
+			limit = {
+				NOT = {
+					state = 9
+				}
+			}
+			add_core_of = SLO
+			remove_core_of = CZE
+			start_resistance = yes
+		}
+		swap_ideas = {
+			remove_idea = CZE_regional_autonomy_crushed
+			add_idea = CZE_regional_autonomy_z_conspiracy
+		}
+	}
+}
+
+country_event = {
+	id = skodism.5 # Student Group Strike
+	title = skodism.5.t
+	desc = skodism.5.d
+
+	picture = GFX_report_event_gathering_protest
+
+	is_triggered_only = yes
+
+	option = {
+		name = skodism.5.a
+		hidden_effect = {
+			country_event = {
+			    id = skodism.3
+			    days = 0
+			    random = 0
+			}
+		}
+	}
+	option = {
+		name = skodism.5.b
+		hidden_effect = {
+			country_event = {
+			    id = skodism.6
+			    days = 0
+			    random = 0
+			}
+		}
+	}
+}
+
+country_event = {
+	id = skodism.6 # Radical Student Takeover
+	title = skodism.6.t
+	desc = skodism.6.d
+
+	picture = GFX_report_event_generic_military_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = skodism.6.a
+		set_country_flag = communist_CZE
+		every_owned_state = {
+			limit = {
+				NOT = {
+					state = 9
+				}
+			}
+			add_core_of = SLO
+			remove_core_of = CZE
+			start_resistance = yes
+		}
+		swap_ideas = {
+			remove_idea = CZE_regional_autonomy_crushed
+			add_idea = CZE_regional_autonomy_z_conspiracy
+		}
+	}
+}
+
+country_event = {
+	id = skodism.7 # Remove The Scars
+	title = skodism.7.t
+	desc = skodism.7.d
+
+	picture = GFX_report_event_generic_factory
+
+	is_triggered_only = no
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = CZE
+		num_of_civilian_factories > 49
+		has_stability > 0.69
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = skodism.7.a
+		remove_ideas = CZE_revolution_scars
+	}
+}
+
+country_event = {
+	id = skodism.8 # Protests In The Capital (Fascism Centralization 1)
+	title = skodism.8.t
+	desc = skodism.8.d
+
+	picture = GFX_report_event_crowd_in_prague
+
+	is_triggered_only = yes
+
+	option = {
+		name = skodism.8.a
+		country_event = {
+				id = skodism.9
+				days = 0
+				random = 0
+		}
+	}
+}
+
+country_event = {
+	id = skodism.9 # Riot Into Revolt (Fascism Centralization 2)
+	title = skodism.9.t
+	desc = skodism.9.d
+
+	picture = GFX_report_event_generic_riot
+
+	is_triggered_only = yes
+
+	option = {
+		name = skodism.9.a
+		hidden_effect = {
+			country_event = {
+					id = skodism.10
+					days = 0
+					random = 0
+			}
+		}
+		add_manpower = -500
+	}
+
+	option = {
+		name = skodism.9.b
+		hidden_effect = {
+			country_event = {
+					id = skodism.10
+					days = 0
+					random = 0
+			}
+		}
+		9 = {
+			damage_building = { type = industrial_complex damage = 0.5 }
+		}
+	}
+}
+
+country_event = {
+	id = skodism.10 # The Second Battle Of Prague (Fascism Centralization 3)
+	title = skodism.10.t
+	desc = skodism.10.d
+
+	picture = GFX_report_event_dutch_soldiers_indonesia
+
+	is_triggered_only = yes
+
+	option = {
+		name = skodism.10.a
+		9 = {
+			damage_building = { type = industrial_complex damage = 1 }
+			damage_building = { type = infrastructure damage = 2 }
+		}
+		hidden_effect = {
+			country_event = {
+				id = skodism.11
+				days = 0
+				random = 0
+			}
+		}
+	}
+}
+
+country_event = {
+	id = skodism.11 # Vanguards And Ex-Officers
+	title = skodism.11.t
+	desc = skodism.11.d
+
+	picture = GFX_report_event_fascist_gathering
+
+	is_triggered_only = yes
+
+	option = {
+		name = skodism.11.a
+		remove_ideas = CZE_fascism_decreasing_civilian_influence
+		remove_ideas = CZE_fascism_decreasing_libertarian_influence
+		set_party_name = {
+		    ideology = democratic
+		    long_name = "Democratic Skodism Party/Original Revolutionaries"
+		    name = "Civilian/Libertarian Faction"
+		}
+		set_party_name = {
+		    ideology = communism
+		    long_name = "United Student Unions For Skodism"
+		    name = "Elite Faction"
+		}
+		set_party_name = {
+		    ideology = fascism
+		    long_name = "Paramilitary And Militia Company"
+		    name = "Military Vanguards"
+		}
+		set_party_name = {
+		    ideology = neutrality
+		    long_name = "Paramilitary And Militia Company"
+		    name = "Military Ex-Officers"
+		}
+		set_popularities = {
+			democratic = 0
+			neutrality = 50
+			fascism = 50
+			communism = 0
+		}
+		set_country_flag = CZE_fascism_vanguards_and_officers
+	}
+}

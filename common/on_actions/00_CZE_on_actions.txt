@@ -1,0 +1,50 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			CZE = {
+				country_event = {
+				    id = skodism.1
+				    days = 0
+				}
+			}
+		}
+	}
+	on_daily = {
+		effect = {
+			CZE = {
+				set_variable = {
+				    var = party_popularity_fascism_resistance
+				    value = party_popularity@fascism
+				}
+				multiply_variable = {
+					var = party_popularity_fascism_resistance
+					value = 1
+				}
+				set_variable = {
+				    var = party_popularity_fascism_war_support
+				    value = party_popularity@fascism
+				}
+				multiply_variable = {
+					var = party_popularity_fascism_war_support
+					value = 0.2
+				}
+				set_variable = {
+				    var = inverse_party_popularity_neutrality_stability
+				    value = party_popularity@neutrality
+				}
+				multiply_variable = {
+					var = inverse_party_popularity_neutrality_stability
+					value = -0.2
+				}
+				set_variable = {
+				    var = party_popularity_neutrality_manpower
+				    value = party_popularity@neutrality
+				}
+				multiply_variable = {
+					var = party_popularity_neutrality_manpower
+					value = 0.04
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,12 @@
+CZE_state_skodism = {
+	icon = generic_prospect_for_resources
+	available = {
+		tag = CZE
+	}
+}
+CZE_fascism_internal_politics = {
+	icon = decision_category_eng_move_to_secure_the_dominions
+	available = {
+		tag = CZE
+	}
+}

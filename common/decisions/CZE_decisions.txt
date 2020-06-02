@@ -1,0 +1,142 @@
+CZE_state_skodism = {
+	CZE_apply_basic_skodism = {
+
+		cost = 50
+
+		state_target = yes
+
+		on_map_mode = map_only
+
+		target_array = controlled_states
+
+		visible = {
+			FROM = {
+				owner = {
+					has_completed_focus = CZE_profits_profits_profits
+				}
+			}
+		}
+
+		available = {
+			FROM = {
+				owner = {
+					has_completed_focus = CZE_profits_profits_profits
+				}
+			}
+		}
+
+		complete_effect = {
+			FROM = {
+				add_dynamic_modifier = {
+					modifier = CZE_skodist_expansion
+				}
+			}
+		}
+	}
+	CZE_open_diplomacy = {
+
+		visible = {
+			tag = CZE
+		}
+
+		complete_effect = {
+			set_rule = {
+    			can_be_called_to_war = yes
+    			can_boost_other_ideologies = yes
+    			can_create_factions = no
+    			can_declare_war_on_same_ideology = yes
+    			can_declare_war_without_wargoal_when_in_war = yes
+    			can_decline_call_to_war = yes
+    			can_force_government = yes
+    			can_guarantee_other_ideologies = yes
+    			can_join_factions = no
+    			can_join_factions_not_allowed_diplomacy = no
+    			can_join_opposite_factions = no
+    			can_lower_tension = yes
+    			can_not_declare_war = no
+    			can_occupy_non_war = yes
+    			can_only_justify_war_on_threat_country = no
+			}
+		}
+	}
+	check_broken = {
+
+		visible = {
+			tag = CZE
+		}
+
+		available = {
+			has_completed_focus = CZE_profits_profits_profits
+		}
+
+		complete_effect = {
+
+		}
+	}
+	CZE_recore_slovak_states = {
+		cost = 0
+
+		state_target = yes
+
+		on_map_mode = map_only
+
+		target_array = controlled_states
+
+		visible = {
+			FROM = {
+				owner = {
+					has_completed_focus = CZE_politics_end_z_conspiracy
+				}
+				is_core_of = SLO
+			}
+		}
+
+		available = {
+			FROM = {
+				owner = {
+					has_completed_focus = CZE_politics_end_z_conspiracy
+				}
+				is_core_of = SLO
+				compliance > 50
+			}
+		}
+
+		complete_effect = {
+			FROM = {
+				add_core_of = CZE
+				remove_core_of = SLO
+				cancel_resistance = yes
+			}
+		}
+	}
+}
+CZE_fascism_internal_politics = {
+	CZE_fascism_investigate_vanguards = {
+		cost = 50
+		days_remove = 60
+		days_re_enable = 0
+
+		visible = {
+			has_completed_focus = CZE_fascism_internal_security
+		}
+
+		modifier = {
+			fascism_drift = -0.1
+			neutrality_drift = 0.1
+		}
+	}
+	CZE_fascism_investigate_ex_officers = {
+		cost = 50
+		days_remove = 60
+		days_re_enable = 0
+
+		visible = {
+			has_completed_focus = CZE_fascism_internal_security
+		}
+
+		modifier = {
+			fascism_drift = 0.1
+			neutrality_drift = -0.1
+		}
+	}
+}

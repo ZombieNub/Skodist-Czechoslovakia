@@ -1,0 +1,55 @@
+CZE_skodist_expansion = {
+	icon = GFX_idea_unknown # optional, will show up in guis if icon is specified
+	enable = { always = yes } #optional, the modifier won't apply if not enabled
+	remove_trigger = { NOT = { is_owned_by = CZE} } #optional, will remove the modifier if true
+
+	# list of modifiers
+	local_building_slots = 10
+	state_resources_factor = 0.5
+}
+CZE_corporate_restore_order = {
+	enable = { always = yes } #optional, the modifier won't apply if not enabled
+
+	# list of modifiers
+	compliance_gain = stability
+}
+CZE_fascism_vanguard_popularity = {
+	icon = GFX_idea_unknown # optional, will show up in guis if icon is specified
+	enable = { always = yes } #optional, the modifier won't apply if not enabled
+
+	# list of modifiers
+	# party_popularity@fascism
+
+	political_power_factor = party_popularity@fascism
+	mobilization_speed = party_popularity@fascism
+	resistance_growth = party_popularity_fascism_resistance
+}
+CZE_fascism_vanguard_popularity_2 = {
+	icon = GFX_idea_unknown # optional, will show up in guis if icon is specified
+	enable = { always = yes } #optional, the modifier won't apply if not enabled
+
+	# list of modifiers
+	# party_popularity@fascism
+
+	war_support_factor = party_popularity_fascism_war_support
+}
+CZE_fascism_ex_officer_popularity = {
+	icon = GFX_idea_unknown # optional, will show up in guis if icon is specified
+	enable = { always = yes } #optional, the modifier won't apply if not enabled
+
+	# list of modifiers
+	# party_popularity@neutrality
+
+	experience_gain_army_factor = party_popularity@neutrality
+	max_planning = party_popularity@neutrality
+	stability_factor = inverse_party_popularity_neutrality_stability
+}
+CZE_fascism_ex_officer_popularity_2 = {
+	icon = GFX_idea_unknown # optional, will show up in guis if icon is specified
+	enable = { always = yes } #optional, the modifier won't apply if not enabled
+
+	# list of modifiers
+	# party_popularity@neutrality
+
+	conscription = party_popularity_neutrality_manpower
+}

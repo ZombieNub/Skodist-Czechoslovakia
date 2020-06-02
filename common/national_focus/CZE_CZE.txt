@@ -1,0 +1,1055 @@
+focus_tree = {
+	id = CZE
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = CZE
+		}
+	}
+	#Focus for Cement Capitalist Theory
+	focus = {
+		id = CZE_cement_capitalist_theory
+		icon = GFX_focus_generic_the_giant_wakes
+		x = 3
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = CZE_complete_the_revolution }
+		mutually_exclusive = { focus = CZE_corporate_skodism }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity= {
+				ideology = democratic
+				popularity = 0.1
+			}
+			add_ideas= CZE_capitalist_1
+		}
+	}
+
+	#Focus for Promote Consumerism
+	focus = {
+		id = CZE_promote_consumerism
+		icon = GFX_goal_generic_propaganda
+		x = 12
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = CZE_corporate_skodism }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = CZE_corporate_consumerism_1
+		}
+	}
+
+	#Focus for A Company With A State
+	focus = {
+		id = CZE_a_company_with_a_state
+		icon = GFX_goal_generic_fortify_city
+		x = 13
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = CZE_eliminate_local_autonomy }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = CZE_corporate_3
+				add_idea = CZE_corporate_4
+			}
+		}
+	}
+
+	#Focus for Eliminate Local Autonomy
+	focus = {
+		id = CZE_eliminate_local_autonomy
+		icon = GFX_focus_spr_crush_the_revolution
+		x = 13
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = CZE_promote_consumerism
+		}
+		prerequisite = {
+			focus = CZE_skoda_supremacy
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = CZE_corporate_2
+				add_idea = CZE_corporate_3
+			}
+			swap_ideas = {
+				remove_idea = CZE_regional_autonomy_start
+				add_idea = CZE_regional_autonomy_crushed
+			}
+			hidden_effect = {
+				country_event = {
+				    id = skodism.2
+				    days = 0
+				    random = 0
+				}
+			}
+
+			custom_effect_tooltip = tooltip_eliminate_local_autonomy
+		}
+	}
+
+	#Focus for Rebuild Transportation
+	focus = {
+		id = CZE_rebuild_transportation
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 5
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = CZE_advance_consumer_industries }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			every_owned_state = {
+				add_building_construction = {
+					type = infrastructure level = 3 instant_build = yes
+				}
+				damage_building = {
+    				type = infrastructure
+    				damage = 3
+				}
+			}
+			add_ideas= CZE_capitalist_railroads
+		}
+	}
+
+	#Focus for Reform Heavy Industry
+	focus = {
+		id = CZE_reform_heavy_industry
+		icon = GFX_goal_generic_production
+		x = 3
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = CZE_the_good_capitalist
+		}
+		prerequisite = {
+			focus = CZE_advance_consumer_industries
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+
+			swap_ideas = {
+				remove_idea = CZE_capitalist_2
+				add_idea = CZE_capitalist_3
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 3
+				category = construction_tech
+			}
+		}
+	}
+
+	#Focus for Complete The Revolution
+	focus = {
+		id = CZE_complete_the_revolution
+		icon = GFX_goal_continuous_non_factory_construct
+		x = 8
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability= 0.05
+			add_ideas= CZE_industry_1
+			add_tech_bonus= {
+				bonus = 1
+				uses = 2
+				category = industry
+			}
+		}
+	}
+
+	#Focus for Corporate Skodism
+	focus = {
+		id = CZE_corporate_skodism
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 13
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = CZE_complete_the_revolution }
+		mutually_exclusive = { focus = CZE_cement_capitalist_theory }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_war_support= 0.10
+			add_popularity= {
+				ideology = democratic
+				popularity = -0.1
+			}
+			add_ideas= CZE_corporate_1
+		}
+	}
+
+	#Focus for Advance Consumer Industries
+	focus = {
+		id = CZE_advance_consumer_industries
+		icon = GFX_goal_generic_improve_relations
+		x = 4
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = CZE_cement_capitalist_theory }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability= 0.1
+			swap_ideas = {
+				remove_idea = CZE_capitalist_1
+				add_idea= CZE_capitalist_2
+			}
+			random_owned_controlled_state={
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+
+			}
+			random_owned_controlled_state={
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+
+			}
+		}
+	}
+
+	#Focus for Inward Focus
+	focus = {
+		id = CZE_inward_focus
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 9
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = CZE_cement_capitalist_theory
+			focus = CZE_corporate_skodism
+		}
+		mutually_exclusive = { focus = CZE_outward_focus }
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_war_support= 0.10
+			swap_ideas= {
+				remove_idea = CZE_industry_1
+				add_idea = CZE_industry_2_inward
+			}
+			random_owned_controlled_state={
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	#Focus for A Moral Duty
+	focus = {
+		id = CZE_a_moral_duty
+		icon = GFX_focus_generic_concessions
+		x = 1
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = CZE_the_good_capitalist }
+		search_filters = { FOCUS_FILTER_STABILITY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			swap_ideas= {
+				remove_idea = CZE_capitalist_welfare_1
+				add_idea = CZE_capitalist_welfare_2
+			}
+		}
+	}
+
+	#Focus for Outward Focus
+	focus = {
+		id = CZE_outward_focus
+		icon = GFX_goal_generic_trade
+		x = 7
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = CZE_cement_capitalist_theory
+			focus = CZE_corporate_skodism
+		}
+		mutually_exclusive = { focus = CZE_inward_focus }
+		search_filters = { FOCUS_FILTER_STABILITY }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_war= no
+		}
+		completion_reward = {
+			add_war_support= 0.05
+			add_stability= 0.05
+			swap_ideas= {
+				remove_idea = CZE_industry_1
+				add_idea = CZE_industry_2_outward
+			}
+			random_owned_controlled_state={
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for The Good Capitalist
+	focus = {
+		id = CZE_the_good_capitalist
+		icon = GFX_goal_generic_consumer_goods
+		x = 2
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = CZE_cement_capitalist_theory }
+		search_filters = { FOCUS_FILTER_STABILITY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas= CZE_capitalist_welfare_1
+		}
+	}
+
+	#Focus for Skoda Works!
+	focus = {
+		id = CZE_skoda_works
+		icon = GFX_focus_generic_tank_production
+		x = 15
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = CZE_skoda_supremacy }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			every_owned_state = {
+				add_building_construction = {type = industrial_complex level = 2 instant_build = yes}
+				damage_building = {type = industrial_complex damage = 2}
+				add_building_construction = {type = arms_factory level = 2 instant_build = yes}
+				damage_building = {type = arms_factory damage = 2}
+			}
+			add_ideas= CZE_corporate_railroads
+		}
+	}
+
+	#Focus for Every Man a Shopkeep
+	focus = {
+		id = CZE_every_man_a_shopkeep
+		icon = GFX_focus_generic_industry_3
+		x = 3
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = CZE_reform_heavy_industry }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = CZE_capitalist_3
+				add_idea = CZE_capitalist_4
+			}
+		}
+	}
+
+	#Focus for Supply The War Machines
+	focus = {
+		id = CZE_supply_the_war_machines
+		icon = GFX_focus_generic_tungsten
+		x = 7
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = CZE_outward_focus }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = CZE_a_shovel_in_each_hand_idea
+			add_ideas = free_trade
+		}
+	}
+
+	#Focus for A Shovel In Each Hand
+	focus = {
+		id = CZE_a_shovel_in_each_hand
+		icon = GFX_goal_generic_construction2
+		x = 9
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = CZE_inward_focus }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = CZE_a_shovel_in_each_hand_idea
+			add_ideas = limited_exports
+		}
+	}
+
+	#Focus for Skoda Supremacy
+	focus = {
+		id = CZE_skoda_supremacy
+		icon = GFX_goal_generic_production
+		x = 14
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = CZE_corporate_skodism }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = CZE_corporate_1
+				add_idea = CZE_corporate_2
+			}
+			9={
+				add_extra_state_shared_building_slots = 12
+				add_building_construction = {
+					type = industrial_complex
+					level = 5
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 5
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for A Rifle In Each Hand
+	focus = {
+		id = CZE_a_rifle_in_each_hand
+		icon = GFX_focus_focus_fra_maquis
+		x = 9
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = CZE_a_shovel_in_each_hand }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = CZE_rifles_everywhere
+		}
+	}
+
+	#Focus for Profits! Profits! Profits!
+	focus = {
+		id = CZE_profits_profits_profits
+		icon = GFX_focus_mex_privatisation
+		x = 8
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = CZE_every_man_a_shopkeep
+			focus = CZE_a_company_with_a_state
+		}
+		prerequisite = {
+			focus = CZE_crack_open_the_international_markets
+			focus = CZE_a_rifle_in_each_hand
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			custom_effect_tooltip = tooltip_rework_heavy_industry
+			add_ideas = CZE_revolution_1
+			#set_rule = {
+    		#	can_be_called_to_war = yes
+    		#	can_boost_other_ideologies = yes
+    		#	can_create_factions = no
+    		#	can_declare_war_on_same_ideology = yes
+    		#	can_declare_war_without_wargoal_when_in_war = yes
+    		#	can_decline_call_to_war = yes
+    		#	can_force_government = yes
+    		#	can_guarantee_other_ideologies = yes
+    		#	can_join_factions = no
+    		#	can_join_factions_not_allowed_diplomacy = no
+    		#	can_join_opposite_factions = no
+    		#	can_lower_tension = yes
+    		#	can_not_declare_war = no
+    		#	can_occupy_non_war = yes
+    		#	can_only_justify_war_on_threat_country = no
+			#}
+		}
+	}
+
+	#Focus for Denounce Savings
+	focus = {
+		id = CZE_denounce_savings
+		icon = GFX_focus_AST_squander_bug
+		x = 11
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = CZE_promote_consumerism }
+		search_filters = { FOCUS_FILTER_STABILITY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = CZE_corporate_consumerism_1
+				add_idea = CZE_corporate_consumerism_2
+			}
+			custom_effect_tooltip = CZE_denounce_savings_tooltip
+		}
+	}
+
+	#Focus for Crack Open The International Markets
+	focus = {
+		id = CZE_crack_open_the_international_markets
+		icon = GFX_focus_hol_gateway_to_europe
+		x = 7
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = CZE_supply_the_war_machines }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			every_country = {
+				add_ideas = free_trade
+			}
+		}
+	}
+
+	############################################################
+
+	#Political Trees
+
+	#Fascism
+	focus = {
+		id = CZE_politics_skodism_fascism
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		x = 22
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = CZE_politics_skodism_fascism_trigger
+				has_country_flag = fascist_CZE
+			}
+		}
+		completion_reward = {
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+			add_popularity= {
+				ideology = fascism
+				popularity = 0.2
+			}
+			add_timed_idea = { idea = CZE_corporate_no_legitimacy days = 365 }
+			add_ideas = CZE_fascism_paramilitary_leaders
+		}
+	}
+	focus = {
+		id = CZE_seize_civilian_institutions
+		icon = GFX_focus_generic_strike_at_democracy2
+		x = 21
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = CZE_politics_skodism_fascism
+		}
+		available = {
+			#custom_trigger_tooltip = {
+			#	tooltip = CZE_politics_skodism_fascism_trigger
+			#	has_country_flag = fascist_CZE
+			#}
+		}
+		completion_reward = {
+			add_stability = 0.1
+			add_timed_idea = { idea = CZE_fascism_decreasing_civilian_influence days = 180}
+		}
+	}
+	focus = {
+		id = CZE_out_with_anarchists
+		icon = GFX_focus_spr_crush_the_revolution
+		x = 23
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = CZE_politics_skodism_fascism
+		}
+		available = {
+			#custom_trigger_tooltip = {
+			#	tooltip = CZE_politics_skodism_fascism_trigger
+			#	has_country_flag = fascist_CZE
+			#}
+		}
+		completion_reward = {
+			add_stability = 0.1
+			add_timed_idea = { idea = CZE_fascism_decreasing_libertarian_influence days = 180}
+		}
+	}
+	focus = {
+		id = CZE_the_moscow_plot
+		icon = GFX_focus_ger_bulwark_against_bolshevism
+		x = 22
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = CZE_seize_civilian_institutions
+		}
+		prerequisite = {
+			focus = CZE_out_with_anarchists
+		}
+		available = {
+			#custom_trigger_tooltip = {
+			#	tooltip = CZE_politics_skodism_fascism_trigger
+			#	has_country_flag = fascist_CZE
+			#}
+		}
+		completion_reward = {
+				add_popularity = { ideology = communism popularity = -1.00 }
+				remove_ideas = CZE_politics_are_fucked
+				country_event = {
+				    id = skodism.8
+				    days = 0
+				    random = 0
+				}
+		}
+	}
+	focus = {
+		id = CZE_fascism_empower_paramilitaries
+		icon = GFX_focus_eng_organise_the_blackshirts
+		x = 23
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = CZE_the_moscow_plot
+		}
+		available = {
+
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = CZE_fascism_paramilitary_leaders
+				add_idea = CZE_fascism_paramilitary_leaders_2
+			}
+			add_popularity = { ideology = fascism popularity = 0.05 }
+		}
+	}
+	focus = {
+		id = CZE_fascism_economic_councils
+		icon = GFX_focus_generic_military_academy
+		x = 24
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = CZE_fascism_empower_paramilitaries
+		}
+		available = {
+
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = CZE_fascism_paramilitary_leaders_2
+				add_idea = CZE_fascism_paramilitary_leaders_3
+			}
+			add_popularity = { ideology = fascism popularity = 0.05 }
+		}
+	}
+	focus = {
+		id = CZE_fascism_vanguard_bueracrats
+		icon = GFX_goal_generic_wolf_pack
+		x = 23
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = CZE_fascism_economic_councils
+		}
+		available = {
+
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = CZE_fascism_paramilitary_leaders_3
+				add_idea = CZE_fascism_paramilitary_leaders_4
+			}
+			add_popularity = { ideology = fascism popularity = 0.05 }
+		}
+	}
+	focus = {
+		id = CZE_fascism_ex_officer_warnings
+		icon = GFX_focus_secret_rearmament
+		x = 21
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = CZE_the_moscow_plot
+		}
+		available = {
+
+		}
+		completion_reward = {
+			add_ideas = CZE_fascism_militia_reorganization
+			add_tech_bonus = {
+			    bonus = 2
+			    uses = 1
+					ahead_reduction = 2
+			    category = infantry_weapons
+			}
+			add_popularity = { ideology = neutrality popularity = 0.05 }
+		}
+	}
+	focus = {
+		id = CZE_fascism_tank_militias
+		icon = GFX_goal_generic_army_tanks
+		x = 20
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = CZE_fascism_ex_officer_warnings
+		}
+		available = {
+
+		}
+		completion_reward = {
+			add_tech_bonus = {
+			    bonus = 2
+			    uses = 1
+					ahead_reduction = 2
+			    category = motorized_equipment
+					category = cat_mechanized_equipment
+			}
+			add_tech_bonus = {
+			    bonus = 2
+			    uses = 1
+					ahead_reduction = 2
+			    category = armor
+			}
+			add_popularity = { ideology = neutrality popularity = 0.05 }
+		}
+	}
+	focus = {
+		id = CZE_fascism_exclude_radicals
+		icon = GFX_focus_generic_license_production
+		x = 21
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = CZE_fascism_tank_militias
+		}
+		available = {
+
+		}
+		completion_reward = {
+			army_experience = -25
+			add_political_power = -100
+			swap_ideas = {
+				remove_idea = CZE_fascism_militia_reorganization
+				add_idea = CZE_fascism_militia_reorganization_2
+			}
+			add_popularity = { ideology = neutrality popularity = 0.05 }
+		}
+	}
+	focus = {
+		id = CZE_fascism_internal_security
+		icon = GFX_focus_usa_build_the_pentagon
+		x = 22
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = CZE_fascism_ex_officer_warnings
+			focus = CZE_fascism_empower_paramilitaries
+		}
+		available = {
+
+		}
+		completion_reward = {
+			custom_effect_tooltip = CZE_fascism_internal_security_tooltip
+			hidden_effect = {
+				add_dynamic_modifier = { modifier = CZE_fascism_vanguard_popularity }
+				add_dynamic_modifier = { modifier = CZE_fascism_ex_officer_popularity }
+			}
+		}
+	}
+	#focus = {
+	#	id = CZE_fascism_popularity_effects
+	#	icon = GFX_focus_usa_build_the_pentagon
+	#	x = 23
+	#	y = 4
+	#	cost = 5
+	#	available_if_capitulated = yes
+	#	ai_will_do = {
+	#		factor = 1
+	#	}
+	#	prerequisite = {
+	#		focus = CZE_fascism_internal_security
+	#	}
+	#	available = {
+	#
+	#	}
+	#	completion_reward = {
+	#		add_dynamic_modifier = { modifier = CZE_fascism_vanguard_popularity }
+	#		add_dynamic_modifier = { modifier = CZE_fascism_ex_officer_popularity }
+	#	}
+	#}
+	#focus = {
+	#	id = CZE_fascism_more_popularity_effects
+	#	icon = GFX_goal_generic_propaganda
+	#	x = 23
+	#	y = 5
+	#	cost = 5
+	#	available_if_capitulated = yes
+	#	ai_will_do = {
+	#		factor = 1
+	#	}
+	#	prerequisite = {
+	#		focus = CZE_fascism_popularity_effects
+	#	}
+	#	available = {
+	#
+	#	}
+	#	completion_reward = {
+	#		add_dynamic_modifier = { modifier = CZE_fascism_vanguard_popularity_2 }
+	#		add_dynamic_modifier = { modifier = CZE_fascism_ex_officer_popularity_2 }
+	#	}
+	#}
+	focus = {
+		id = CZE_fascism_the_global_market
+		icon = GFX_focus_spr_anarchism_knows_no_borders
+		
+	}
+
+	#Communism
+	focus = {
+		id = CZE_politics_skodism_communism
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		x = 30
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = CZE_politics_skodism_communism_trigger
+				has_country_flag = communist_CZE
+			}
+		}
+		completion_reward = {
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+			add_popularity= {
+				ideology = communism
+				popularity = 0.2
+			}
+			add_timed_idea = { idea = CZE_corporate_no_legitimacy days = 365 }
+			add_ideas = CZE_communism_student_leaders
+		}
+	}
+
+	#Authoritarian
+	focus = {
+		id = CZE_politics_end_z_conspiracy
+		icon = GFX_focus_YUG_zmaj
+		x = 26
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = CZE_politics_skodism_fascism
+			focus = CZE_politics_skodism_communism
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+
+		}
+		completion_reward = {
+			custom_effect_tooltip = politics_end_z_conspiracy
+			add_dynamic_modifier = { modifier = CZE_corporate_restore_order }
+		}
+	}
+
+	focus = {
+		id = test_time_boyos
+		icon = GFX_focus_YUG_zmaj
+		x = 0
+		y = 0
+		cost = 0
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+
+		}
+		completion_reward = {
+			every_owned_state = {
+				add_building_construction = {
+				    type = industrial_complex
+				    level = 25
+				    instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = test_time_boyos_2_electric_boogaloo
+		icon = GFX_focus_YUG_zmaj
+		x = 0
+		y = 1
+		cost = 0
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+
+		}
+		completion_reward = {
+			release = GER
+		}
+	}
+}
