@@ -1,6 +1,27 @@
 add_namespace = skodism
 
 country_event = {
+	id = skodism.914
+	title = skodism.914.t
+	desc = skodism.914.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = skodism.914.a
+		for_each_scope_loop = {
+			array = custom_all_states
+
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+country_event = {
 	id = skodism.1 # Intro Event
 	title = skodism.1.t
 	desc = skodism.1.d
@@ -297,13 +318,13 @@ country_event = {
 		}
 		set_party_name = {
 		    ideology = fascism
-		    long_name = "Paramilitary And Militia Company"
-		    name = "Military Vanguards"
+				long_name = "Skodist Paramilitary Corporation"
+		    name = "Paramilitary Vanguards"
 		}
 		set_party_name = {
 		    ideology = neutrality
-		    long_name = "Paramilitary And Militia Company"
-		    name = "Military Ex-Officers"
+		    long_name = "Pan-Skodist Militia Union"
+		    name = "Militia Ex-Officers"
 		}
 		set_popularities = {
 			democratic = 0
