@@ -116,7 +116,7 @@ CZE_state_skodism = {
 
 		on_map_mode = map_only
 
-		target_array = all_states
+		target_array = every_state
 
 		visible = {
 			FROM = {

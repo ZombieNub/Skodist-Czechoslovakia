@@ -2,19 +2,25 @@ on_actions = {
 	on_startup = {
 		effect = {
 			every_state = {
-				add_to_array = {
-					array = custom_all_states
-					value = THIS
+				CZE = {
+						add_to_array = {
+							global.custom_all_states = PREV
+						}
 				}
 			}
+			#for_each_scope_loop = {
+			#	array = global.custom_all_states
+			#
+			#	add_building_construction = {
+			#		type = industrial_complex
+			#		level = 25
+			#		instant_build = yes
+			#	}
+			#}
 			CZE = {
 				country_event = {
 				    id = skodism.1
 				    days = 0
-				}
-				country_event = {
-					id = skodism.914
-					days = 0
 				}
 			}
 		}
