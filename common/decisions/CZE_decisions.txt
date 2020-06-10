@@ -121,6 +121,98 @@ CZE_state_skodism = {
 		visible = {
 			FROM = {
 				owner = {
+					always = no
+				}
+				NOT = {
+					is_core_of = CZE
+					is_core_of = SLO
+				}
+			}
+			OR = {
+				FROM = {
+					any_neighbor_state = {
+						is_core_of = CZE
+					}
+				}
+				AND = {
+					FROM = {
+						is_coastal = yes
+					}
+					CZE = {
+						any_owned_state = {
+							is_coastal = yes
+							is_core_of = CZE
+						}
+					}
+				}
+			}
+		}
+
+		available = {
+			FROM = {
+				owner = {
+					always = no
+				}
+				NOT = {
+					is_core_of = CZE
+					is_core_of = SLO
+				}
+			}
+			OR = {
+				FROM = {
+					any_neighbor_state = {
+						is_core_of = CZE
+					}
+				}
+				AND = {
+					FROM = {
+						is_coastal = yes
+					}
+					CZE = {
+						any_owned_state = {
+							is_coastal = yes
+							is_core_of = CZE
+						}
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			every_country = {
+				limit = {
+					FROM = {
+						is_core_of = PREV
+					}
+				}
+
+				remove_state_core = FROM
+			}
+			FROM = {
+				add_core_of = CZE
+				if = {
+					limit = {
+						NOT = {
+							is_owned_by = CZE
+						}
+					}
+					start_resistance = yes
+				}
+			}
+		}
+	}
+	CZE_expand_skodism_owned_only = {
+		cost = 0
+
+		state_target = yes
+
+		on_map_mode = map_only
+
+		target_array = controlled_states
+
+		visible = {
+			FROM = {
+				owner = {
 					has_completed_focus = CZE_fascism_the_global_market
 				}
 				NOT = {
@@ -190,14 +282,6 @@ CZE_state_skodism = {
 			}
 			FROM = {
 				add_core_of = CZE
-				if = {
-					limit = {
-						NOT = {
-							is_owned_by = CZE
-						}
-					}
-					start_resistance = yes
-				}
 			}
 		}
 	}
