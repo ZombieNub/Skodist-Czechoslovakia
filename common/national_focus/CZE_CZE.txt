@@ -1026,6 +1026,90 @@ focus_tree = {
 			add_dynamic_modifier = { modifier = CZE_corporate_restore_order }
 		}
 	}
+	focus = {
+		id = CZE_corporate_reward_loyalty
+		icon = GFX_goal_generic_improve_relations
+		x = 25
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = CZE_politics_end_z_conspiracy
+		}
+		mutually_exclusive = {
+			focus = CZE_corporate_punish_rebels
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+
+		}
+		completion_reward = {
+			add_ideas = CZE_corporate_reward_loyalty_idea
+		}
+	}
+	focus = {
+		id = CZE_corporate_punish_rebels
+		icon = GFX_goal_generic_political_pressure
+		x = 27
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = CZE_politics_end_z_conspiracy
+		}
+		mutually_exclusive = {
+			focus = CZE_corporate_reward_loyalty
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+
+		}
+		completion_reward = {
+			add_ideas = CZE_corporate_punish_rebels_idea
+		}
+	}
+	focus = {
+		id = CZE_corporate_new_business_leaders
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 26
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = CZE_corporate_reward_loyalty
+			focus = CZE_corporate_punish_rebels
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+
+		}
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					NOT = {
+						state = 9
+					}
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_timed_idea = { idea = CZE_temp_economic_investment days = 180 }
+		}
+	}
 
 	focus = {
 		id = test_time_boyos

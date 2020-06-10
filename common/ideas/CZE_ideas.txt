@@ -180,6 +180,27 @@ ideas = {
 				non_core_manpower = -0.02
 			}
 		}
+		#Temporary Spirits
+		CZE_temp_economic_investment = {
+			allowed = {
+				original_tag = CZE
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_hyper_inflation3
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.15
+				production_factory_efficiency_gain_factor = -0.1
+			}
+		}
+
 		#Focus Tree Spirits
 		CZE_a_shovel_in_each_hand_idea = {
 			allowed = {
@@ -638,6 +659,43 @@ ideas = {
 				stability_weekly = 0.0030
 			}
 		}
+		CZE_corporate_reward_loyalty_idea = {
+			allowed = {
+				original_tag = CZE
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = MEX_politicised_army
+
+			removal_cost = -1
+
+			modifier = {
+				compliance_gain = 0.2
+			}
+		}
+		CZE_corporate_punish_rebels_idea = {
+			allowed = {
+				original_tag = CZE
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = MEX_politicised_army
+
+			removal_cost = -1
+
+			modifier = {
+				resistance_growth = -0.2
+			}
+		}
+
 
 		CZE_fascism_paramilitary_leaders = {
 			allowed = {
