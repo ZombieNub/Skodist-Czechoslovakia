@@ -116,19 +116,34 @@ CZE_state_skodism = {
 
 		on_map_mode = map_only
 
-		target_array = every_state
+		target_array = global.custom_all_states
 
 		visible = {
 			FROM = {
-				#owner = {
-				#	has_completed_focus = CZE_fascism_the_global_market
-				#}
+				owner = {
+					has_completed_focus = CZE_fascism_the_global_market
+				}
 				NOT = {
 					is_core_of = CZE
 					is_core_of = SLO
 				}
-				any_neighbor_state = {
-					is_core_of = CZE
+			}
+			OR = {
+				FROM = {
+					any_neighbor_state = {
+						is_core_of = CZE
+					}
+				}
+				AND = {
+					FROM = {
+						is_coastal = yes
+					}
+					CZE = {
+						any_owned_state = {
+							is_coastal = yes
+							is_core_of = CZE
+						}
+					}
 				}
 			}
 		}
@@ -136,28 +151,53 @@ CZE_state_skodism = {
 		available = {
 			FROM = {
 				owner = {
-					#has_completed_focus = CZE_fascism_the_global_market
+					has_completed_focus = CZE_fascism_the_global_market
 				}
 				NOT = {
 					is_core_of = CZE
 					is_core_of = SLO
 				}
-				any_neighbor_state = {
-					is_core_of = CZE
+			}
+			OR = {
+				FROM = {
+					any_neighbor_state = {
+						is_core_of = CZE
+					}
+				}
+				AND = {
+					FROM = {
+						is_coastal = yes
+					}
+					CZE = {
+						any_owned_state = {
+							is_coastal = yes
+							is_core_of = CZE
+						}
+					}
 				}
 			}
 		}
 
 		complete_effect = {
-			for_each_scope_loop = {
-				array = countries
-				break = break
+			every_country = {
+				limit = {
+					FROM = {
+						is_core_of = PREV
+					}
+				}
 
 				remove_state_core = FROM
 			}
 			FROM = {
 				add_core_of = CZE
-				enable_resistance = yes
+				if = {
+					limit = {
+						NOT = {
+							is_owned_by = CZE
+						}
+					}
+					start_resistance = yes
+				}
 			}
 		}
 	}
