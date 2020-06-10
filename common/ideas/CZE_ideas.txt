@@ -674,7 +674,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				compliance_gain = 0.2
+				compliance_gain = 0.5
 			}
 		}
 		CZE_corporate_punish_rebels_idea = {

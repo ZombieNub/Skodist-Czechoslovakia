@@ -763,6 +763,9 @@ focus_tree = {
 		prerequisite = {
 			focus = CZE_fascism_empower_paramilitaries
 		}
+		prerequisite = {
+			focus = CZE_corporate_new_business_leaders
+		}
 		available = {
 
 		}

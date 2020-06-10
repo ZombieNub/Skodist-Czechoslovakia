@@ -52,6 +52,9 @@
 
  CZE_skodist_expansion:0 "Expansion Of Skodism"
 
+ ####Temporary Spirits
+ CZE_temp_economic_investment:0 "Large Economic Investment"
+
  ####POLITICS
 
  CZE_corporate_no_legitimacy:0 "No Legitimacy"
