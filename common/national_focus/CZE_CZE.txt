@@ -1113,6 +1113,34 @@ focus_tree = {
 			add_timed_idea = { idea = CZE_temp_economic_investment days = 180 }
 		}
 	}
+	focus = {
+		id = CZE_final_end_to_z
+		icon = GFX_goal_generic_attack_allies
+		x = 26
+		y = 6
+		cost = 20
+		available_if_capitulated = yes
+		cancelable = no
+		prerequisite = {
+			focus = CZE_corporate_new_business_leaders
+		}
+		prerequisite = {
+			focus = CZE_fascism_vanguard_bueracrats
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				any_owned_state = {
+					is_core_of = SLO
+				}
+			}
+		}
+		completion_reward = {
+			remove_ideas = CZE_regional_autonomy_z_conspiracy
+		}
+	}
 
 	focus = {
 		id = test_time_boyos
