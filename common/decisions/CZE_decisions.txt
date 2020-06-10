@@ -56,6 +56,7 @@ CZE_state_skodism = {
     			can_not_declare_war = no
     			can_occupy_non_war = yes
     			can_only_justify_war_on_threat_country = no
+					can_create_collaboration_government = no
 			}
 		}
 	}
@@ -202,7 +203,8 @@ CZE_state_skodism = {
 		}
 	}
 	CZE_expand_skodism_owned_only = {
-		cost = 0
+		cost = 100
+		days_remove = 30
 
 		state_target = yes
 
@@ -219,6 +221,7 @@ CZE_state_skodism = {
 					is_core_of = CZE
 					is_core_of = SLO
 				}
+				compliance > 50
 			}
 			OR = {
 				FROM = {
@@ -249,6 +252,7 @@ CZE_state_skodism = {
 					is_core_of = CZE
 					is_core_of = SLO
 				}
+				compliance > 50
 			}
 			OR = {
 				FROM = {
@@ -266,6 +270,15 @@ CZE_state_skodism = {
 							is_core_of = CZE
 						}
 					}
+				}
+			}
+		}
+
+		modifier = {
+			FROM = {
+				owner = {
+					stability = -0.05
+					compliance_gain = -0.5
 				}
 			}
 		}
