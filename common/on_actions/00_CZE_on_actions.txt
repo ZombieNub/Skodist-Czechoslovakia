@@ -29,6 +29,14 @@ on_actions = {
 		effect = {
 			CZE = {
 				set_variable = {
+					var = stability_compliance_gain
+					value = stability
+				}
+				multiply_variable = {
+					var = stability_compliance_gain
+					value = 0.1
+				}
+				set_variable = {
 				    var = party_popularity_fascism_resistance
 				    value = party_popularity@fascism
 				}

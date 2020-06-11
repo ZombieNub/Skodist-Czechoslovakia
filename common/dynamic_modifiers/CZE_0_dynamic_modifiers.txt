@@ -11,7 +11,7 @@ CZE_corporate_restore_order = {
 	enable = { always = yes } #optional, the modifier won't apply if not enabled
 
 	# list of modifiers
-	compliance_gain = stability
+	compliance_gain = stability_compliance_gain
 }
 CZE_fascism_vanguard_popularity = {
 	icon = GFX_idea_unknown # optional, will show up in guis if icon is specified
