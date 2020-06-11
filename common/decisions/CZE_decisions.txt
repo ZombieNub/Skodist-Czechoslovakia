@@ -2,6 +2,7 @@ CZE_state_skodism = {
 	CZE_apply_basic_skodism = {
 
 		cost = 50
+		days_remove = 30
 
 		state_target = yes
 
@@ -12,7 +13,7 @@ CZE_state_skodism = {
 		visible = {
 			FROM = {
 				NOT = {
-					has_dynamic_modifier = CZE_apply_basic_skodism
+					has_state_flag = CZE_basic_skodism
 				}
 				owner = {
 					has_completed_focus = CZE_profits_profits_profits
@@ -23,7 +24,7 @@ CZE_state_skodism = {
 		available = {
 			FROM = {
 				NOT = {
-					has_dynamic_modifier = CZE_apply_basic_skodism
+					has_state_flag = CZE_basic_skodism
 				}
 				owner = {
 					has_completed_focus = CZE_profits_profits_profits
@@ -36,6 +37,7 @@ CZE_state_skodism = {
 				add_dynamic_modifier = {
 					modifier = CZE_skodist_expansion
 				}
+				set_state_flag = CZE_basic_skodism
 			}
 		}
 	}
