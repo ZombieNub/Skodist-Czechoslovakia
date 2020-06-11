@@ -11,6 +11,9 @@ CZE_state_skodism = {
 
 		visible = {
 			FROM = {
+				NOT = {
+					has_dynamic_modifier = CZE_apply_basic_skodism
+				}
 				owner = {
 					has_completed_focus = CZE_profits_profits_profits
 				}
@@ -19,6 +22,9 @@ CZE_state_skodism = {
 
 		available = {
 			FROM = {
+				NOT = {
+					has_dynamic_modifier = CZE_apply_basic_skodism
+				}
 				owner = {
 					has_completed_focus = CZE_profits_profits_profits
 				}
