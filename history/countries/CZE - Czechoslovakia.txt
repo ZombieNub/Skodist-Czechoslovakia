@@ -23,8 +23,8 @@ set_research_slots = 3
 
 set_politics = {
 	ruling_party = democratic
-	last_election = "1935.5.19"
-	election_frequency = 60
+	last_election = "1935.12.31"
+	election_frequency = 15
 	elections_allowed = no
 }
 
@@ -120,23 +120,23 @@ add_ideas = {
 	CZE_regional_autonomy_start
 }
 
-set_party_name = { 
-    ideology = democratic 
-    long_name = "Democratic Skodism Party" 
-    name = "Civilian Faction" 
+set_party_name = {
+    ideology = democratic
+    long_name = "Democratic Skodism Party"
+    name = "Civilian Faction"
 }
-set_party_name = { 
-    ideology = communism 
-    long_name = "United Student Unions For Skodism" 
-    name = "Elite Faction" 
+set_party_name = {
+    ideology = communism
+    long_name = "United Student Unions For Skodism"
+    name = "Elite Faction"
 }
-set_party_name = { 
-    ideology = fascism 
-    long_name = "Paramilitary And Militia Company" 
+set_party_name = {
+    ideology = fascism
+    long_name = "Paramilitary And Militia Company"
     name = "Military Faction"
 }
-set_party_name = { 
-    ideology = neutrality 
-    long_name = "Original Revolutionaries" 
-    name = "Libertarian Faction" 
+set_party_name = {
+    ideology = neutrality
+    long_name = "Original Revolutionaries"
+    name = "Libertarian Faction"
 }

@@ -1142,6 +1142,36 @@ focus_tree = {
 		}
 	}
 
+	# Army/Navy/Airforce Focuses
+
+	focus = {
+		id = CZE_militia_beginning
+		icon = GFX_focus_generic_manpower
+		x = 60
+		y = 0
+		cost = 0
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			has_army_experience > 49.9
+			custom_trigger_tooltip = {
+				tooltip = CZE_politics_skodism_fascism_trigger
+				has_country_flag = fascist_CZE
+			}
+		}
+		completion_reward = {
+			add_political_power = 200
+			army_experience = -50
+			#add_tech_bonus = {
+			#    bonus = -0.5
+			#    uses = 1
+			#    category = land_doctrine
+			#}
+		}
+	}
+
 	focus = {
 		id = test_time_boyos
 		icon = GFX_focus_YUG_zmaj

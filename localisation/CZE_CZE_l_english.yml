@@ -97,3 +97,8 @@
   CZE_final_end_to_z:0 "The Final Push"
   CZE_final_end_to_z_desc:0 "At last, the population of Czechoslovakia is now on the side of Skodism, and few members of the Z conspiracy remain. One last push against the subversive hostiles shall bring an end to this ugly group of mercantilists! Long live the Skodist Revolution!"
   politics_end_z_conspiracy:0 "Allows you to core Slovak cores with high enough compliance. Compliance increases with stability."
+
+  # Army/Navy/Airforce Focuses
+
+  CZE_militia_beginning:0 "Maintain The Militias"
+  CZE_militia_beginning_desc:0 "The skodist revolution defeated the professional armies of Czechoslovakia and has proven to the world that you don't need dicipline, standardization, or a command structure to win a war. Skodism was started on the backs of militias, and it shall continue as such!"
