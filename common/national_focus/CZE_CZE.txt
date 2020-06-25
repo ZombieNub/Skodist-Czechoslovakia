@@ -1176,7 +1176,7 @@ focus_tree = {
 		icon = GFX_focus_generic_manpower
 		x = 60
 		y = 0
-		cost = 0
+		cost = 5
 		available_if_capitulated = yes
 		ai_will_do = {
 			factor = 0
@@ -1198,10 +1198,10 @@ focus_tree = {
 	}
 	focus = {
 		id = CZE_militia_free_rifle_groups # Allows country to have all 4 military doctrines at the cost of militia disorganization and long doctrine research times.
-		icon = GFX_focus_generic_manpower
+		icon = GFX_focus_generic_support_the_left_right
 		x = 59
 		y = 1
-		cost = 0
+		cost = 20
 		available_if_capitulated = yes
 		ai_will_do = {
 			factor = 0
@@ -1223,6 +1223,31 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = CZE_militia_free_rifle_groups_tooltip
+		}
+	}
+	focus = {
+		id = CZE_militia_autonomy_mass_assault_loose_command_structure
+		icon = GFX_focus_prc_infiltration
+		x = 56
+		y = 2
+		cost = 20
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 0
+		}
+		prerequisite = {
+			focus = CZE_militia_free_rifle_groups
+		}
+		available = {
+
+		}
+		completion_reward = {
+			add_tech_bonus = {
+			    bonus = 2
+			    uses = 3
+			    category = cat_mass_assault
+			}
+			add_ideas = CZE_militia_autonomy_mass_assault_loose_command_structure_idea_1
 		}
 	}
 

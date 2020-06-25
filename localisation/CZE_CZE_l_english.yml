@@ -104,6 +104,8 @@
 
   CZE_militia_beginning:0 "Maintain The Militias"
   CZE_militia_beginning_desc:0 "The skodist revolution defeated the professional armies of Czechoslovakia and has proven to the world that you don't need dicipline, standardization, or a command structure to win a war. Skodism was started on the backs of militias, and it shall continue as such!"
-  CZE_militia_free_rifle_groups:0 "Free Rifle Groups"
+  CZE_militia_free_rifle_groups:0 "Promote Division Autonomy"
   CZE_militia_free_rifle_groups_desc:0 "The people that follow Skodism are a unique bunch. They come to defend the revolution with what they already have. It's an incredible privilege to be able to fight, and as such the independent soldier must be elevated, and the individual militia companies must retain their autonomy from each other and from any central authority."
-  CZE_militia_free_rifle_groups_tooltip:0 "§GThis will allow us to research all 4 doctrines parallel to each other.§!\n§RHowever, we will not be able to eliminate§!§YMilitary Legacy of the Skodist Revolution.§!"
+  CZE_militia_free_rifle_groups_tooltip:0 "§GThis will allow us to research all 4 land doctrines parallel to each other.§!\n§RHowever, we will not be able to eliminate§! §YMilitary Legacy of the Skodist Revolution.§!"
+  CZE_militia_autonomy_mass_assault_loose_command_structure:0 "Loose Command Structure"
+  CZE_militia_autonomy_mass_assault_loose_command_structure_desc:0 "We must not interfere in the affairs of the commanders on the ground. If they want their own officers appointed, then we must let them."
