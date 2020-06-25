@@ -727,6 +727,26 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = CZE_fascism_utilize_universities
+		icon = GFX_focus_research
+		x = 19
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = CZE_the_moscow_plot
+		}
+		available = {
+
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
 		id = CZE_fascism_empower_paramilitaries
 		icon = GFX_focus_eng_organise_the_blackshirts
 		x = 23
@@ -1162,7 +1182,6 @@ focus_tree = {
 			factor = 0
 		}
 		available = {
-			has_army_experience > 49.9
 			custom_trigger_tooltip = {
 				tooltip = CZE_politics_skodism_fascism_trigger
 				has_country_flag = fascist_CZE
@@ -1170,12 +1189,40 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = 200
-			army_experience = -50
 			#add_tech_bonus = {
 			#    bonus = -0.5
 			#    uses = 1
 			#    category = land_doctrine
 			#}
+		}
+	}
+	focus = {
+		id = CZE_militia_free_rifle_groups # Allows country to have all 4 military doctrines at the cost of militia disorganization and long doctrine research times.
+		icon = GFX_focus_generic_manpower
+		x = 59
+		y = 1
+		cost = 0
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 0
+		}
+		prerequisite = {
+			focus = CZE_militia_beginning
+		}
+		available = {
+
+		}
+		completion_reward = {
+			hidden_effect = {
+				set_technology = {
+				    mobile_warfare = 1
+				    superior_firepower = 1
+				    trench_warfare = 1
+				    mass_assault = 1
+				    popup = yes # default is yes. if set to no, no pop up will display for player
+				}
+			}
+			custom_effect_tooltip = CZE_militia_free_rifle_groups_tooltip
 		}
 	}
 

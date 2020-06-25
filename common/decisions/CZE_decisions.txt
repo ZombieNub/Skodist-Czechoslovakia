@@ -283,12 +283,8 @@ CZE_state_skodism = {
 		}
 
 		modifier = {
-			FROM = {
-				owner = {
-					stability = -0.05
-					compliance_gain = -0.5
-				}
-			}
+			stability_factor = -0.05
+			compliance_gain = -0.5
 		}
 
 		complete_effect = {

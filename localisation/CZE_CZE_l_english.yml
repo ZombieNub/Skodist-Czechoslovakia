@@ -59,6 +59,8 @@
   CZE_out_with_anarchists_desc:0 "The libertarian breakaways may claim to be the true revolution, however they are merely the angry dying spasms of anarchism corrupted into a civilian form. Their name, the \"Original Revolutionaries\" is nothing but a farce, and only portrays hubris. Its time to end this vestigial faction, and with the paramilitaries on our side, they won't have a chance!"
   CZE_the_moscow_plot:0 "The Moscow Plot"
   CZE_the_moscow_plot_desc:0 "At last, the elite faction and its recalcitrant student unions has been revealed for what they truly are. Documents uncovered by our paramilitaries reveal a terrible story: The Z unions, student unions, and members of the USUS have all been taking bribes from the Soviet Union to undermine the revolution. We must redouble our efforts and crush these elites, lest they launch their revolution tomorrow!"
+  CZE_fascism_utilize_universities:0 "Utilize The Universities"
+  CZE_fascism_utilize_universities_desc:0 "As much as they are hotbeads of socialism, the greatest thought in the fields of weaponry, tactics, markets, and even Skodism came from the universities. It would be drastically unwise to abandon these great instiutions, though we should no longer hold them in public hands. We must privatize them and keep a close eye using the paramilitary groups, though this may prevent great innovations."
   CZE_fascism_empower_paramilitaries:0 "Private Peacekeepers"
   CZE_fascism_empower_paramilitaries_desc:0 "Paramilitarism is a primary political affair, and is not meant to be profitable. As such, our private paramilitaries will struggle to exist in the free market framework, unless we propose something radical. We shall transform them into private police companies, which the capitalists can hire to protect their businesses from theives and rebels."
   CZE_fascism_economic_councils:0 "Market Militarism"
@@ -102,3 +104,6 @@
 
   CZE_militia_beginning:0 "Maintain The Militias"
   CZE_militia_beginning_desc:0 "The skodist revolution defeated the professional armies of Czechoslovakia and has proven to the world that you don't need dicipline, standardization, or a command structure to win a war. Skodism was started on the backs of militias, and it shall continue as such!"
+  CZE_militia_free_rifle_groups:0 "Free Rifle Groups"
+  CZE_militia_free_rifle_groups_desc:0 "The people that follow Skodism are a unique bunch. They come to defend the revolution with what they already have. It's an incredible privilege to be able to fight, and as such the independent soldier must be elevated, and the individual militia companies must retain their autonomy from each other and from any central authority."
+  CZE_militia_free_rifle_groups_tooltip:0 "§GThis will allow us to research all 4 doctrines parallel to each other.§!\n§RHowever, we will not be able to eliminate§!§YMilitary Legacy of the Skodist Revolution.§!"
