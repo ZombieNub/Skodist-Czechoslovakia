@@ -1243,11 +1243,40 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_tech_bonus = {
-			    bonus = 2
+			    bonus = 1
 			    uses = 3
 			    category = cat_mass_assault
 			}
 			add_ideas = CZE_militia_autonomy_mass_assault_loose_command_structure_idea_1
+		}
+	}
+	focus = {
+		id = CZE_militia_autonomy_mass_assault_unleash_all_forces
+		icon = GFX_focus_usa_focus_on_europe
+		x = 56
+		y = 3
+		cost = 20
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 0
+		}
+		prerequisite = {
+			focus = CZE_militia_autonomy_mass_assault_loose_command_structure
+		}
+		available = {
+
+		}
+		completion_reward = {
+			add_tech_bonus = {
+			    bonus = 1
+			    uses = 3
+			    category = cat_mass_assault
+			}
+			add_threat = 200
+			swap_ideas = {
+				remove_idea = CZE_militia_autonomy_mass_assault_loose_command_structure_idea_1
+				add_idea = CZE_militia_autonomy_mass_assault_loose_command_structure_idea_2
+			}
 		}
 	}
 
