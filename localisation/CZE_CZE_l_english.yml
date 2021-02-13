@@ -98,6 +98,8 @@
   communism_accelerationism_tooltip:0 "Depending on our ideological direction, we may get a §Yresearch speed§! or §Yconstruction speed§! bonus."
   communism_accelerationism_tooltip_student:0 "Depending on our ideological direction, we may get a §Gresearch speed§! or §Yconstruction speed§! bonus."
   communism_accelerationism_tooltip_bourgeois:0 "Depending on our ideological direction, we may get a §Yresearch speed§! or §Gconstruction speed§! bonus."
+  CZE_communism_student_skodism_avant_garde_intelligentsia:0 "Avant-Garde Intelligentsia"
+  CZE_communism_student_skodism_avant_garde_intelligentsia_desc:0 "While it's necessary for every member of society to understand Skodism to it's fullest if we are ever to achieve it, the common man has a hard time grasping the big picture. We shall sponsor new college initiatives to produce products in the art and humanities field, to show our people and the world what our economic theory is all about."
 
   #authoritarianism
   CZE_politics_end_z_conspiracy:0 "End The Z Conspiracy"

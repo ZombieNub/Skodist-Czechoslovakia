@@ -1128,9 +1128,25 @@ focus_tree = {
 				limit = {
 					has_completed_focus = CZE_communism_student_skodism
 				}
-				swap_ideas = {
-					remove_idea = CZE_communism_student_leaders_2
-					add_idea = CZE_communism_student_leaders_2_accelerate
+				if = {
+					limit = {
+						has_completed_focus = CZE_communism_student_skodism_avant_garde_intelligentsia
+					}
+					swap_ideas = {
+						remove_idea = CZE_communism_student_leaders_3
+						add_idea = CZE_communism_student_leaders_3_accelerate
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_completed_focus = CZE_communism_student_skodism_avant_garde_intelligentsia
+						}
+					}
+					swap_ideas = {
+						remove_idea = CZE_communism_student_leaders_2
+						add_idea = CZE_communism_student_leaders_2_accelerate
+					}
 				}
 				custom_effect_tooltip = communism_accelerationism_tooltip_student
 			}
@@ -1158,6 +1174,42 @@ focus_tree = {
 					add_idea = CZE_communism_student_leaders_accelerate
 				}
 				custom_effect_tooltip = communism_accelerationism_tooltip
+			}
+		}
+	}
+	focus = {
+		id = CZE_communism_student_skodism_avant_garde_intelligentsia
+		icon = GFX_focus_GRE_reviving_the_double_headed_eagle
+		x = 28
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = CZE_communism_student_skodism
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_completed_focus = CZE_communism_embrace_accelerationism
+				}
+				swap_ideas = {
+					remove_idea = CZE_communism_student_leaders_2_accelerate
+					add_idea = CZE_communism_student_leaders_3_accelerate
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_completed_focus = CZE_communism_embrace_accelerationism
+					}
+				}
+				swap_ideas = {
+					remove_idea = CZE_communism_student_leaders_2
+					add_idea = CZE_communism_student_leaders_3
+				}
 			}
 		}
 	}
