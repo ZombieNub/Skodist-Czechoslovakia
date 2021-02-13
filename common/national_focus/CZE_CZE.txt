@@ -123,6 +123,19 @@ focus_tree = {
 		}
 		completion_reward = {
 			every_owned_state = {
+				limit = {
+					OR = {
+						is_core_of = CZE
+						is_core_of = SLO
+					}
+				}
+				add_building_construction = {
+					type = industrial_complex level = 2 instant_build = yes
+				}
+				damage_building = {
+    				type = industrial_complex
+    				damage = 2
+				}
 				add_building_construction = {
 					type = infrastructure level = 3 instant_build = yes
 				}
@@ -204,6 +217,13 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		select_effect = {
+			country_event = {
+					id = skodism.14
+					days = 0
+					random = 0
+			}
+		}
 		completion_reward = {
 			add_war_support= 0.10
 			add_popularity= {
@@ -211,6 +231,7 @@ focus_tree = {
 				popularity = -0.1
 			}
 			add_ideas= CZE_corporate_1
+			custom_effect_tooltip = tooltip_initial_corporatism
 		}
 	}
 
@@ -407,6 +428,12 @@ focus_tree = {
 		}
 		completion_reward = {
 			every_owned_state = {
+				limit = {
+					OR = {
+						is_core_of = CZE
+						is_core_of = SLO
+					}
+				}
 				add_building_construction = {type = industrial_complex level = 2 instant_build = yes}
 				damage_building = {type = industrial_complex damage = 2}
 				add_building_construction = {type = arms_factory level = 2 instant_build = yes}
@@ -1026,11 +1053,120 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = CZE_communism_student_skodism
+		icon = GFX_focus_generic_socialist_science
+		x = 29
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = CZE_politics_skodism_communism
+		}
+		mutually_exclusive = {
+			focus = CZE_communism_true_bourgeois_revolution
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = {
+					id = skodism.12
+					days = 0
+					random = 0
+			}
+			swap_ideas = {
+				remove_idea = CZE_communism_student_leaders
+				add_idea = CZE_communism_student_leaders_2
+			}
+		}
+	}
+	focus = {
+		id = CZE_communism_true_bourgeois_revolution
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		x = 31
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = CZE_politics_skodism_communism
+		}
+		mutually_exclusive = {
+			focus = CZE_communism_student_skodism
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = {
+					id = skodism.13
+					days = 0
+					random = 0
+			}
+			swap_ideas = {
+				remove_idea = CZE_communism_student_leaders
+				add_idea = CZE_communism_bourgeois_2
+			}
+		}
+	}
+	focus = {
+		id = CZE_communism_embrace_accelerationism
+		icon = GFX_focus_TUR_purge_the_kemalists
+		x = 30
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = CZE_communism_student_skodism
+			focus = CZE_communism_true_bourgeois_revolution
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_completed_focus = CZE_communism_student_skodism
+				}
+				swap_ideas = {
+					remove_idea = CZE_communism_student_leaders_2
+					add_idea = CZE_communism_student_leaders_2_accelerate
+				}
+				custom_effect_tooltip = communism_accelerationism_tooltip_student
+			}
+			if = {
+				limit = {
+					has_completed_focus = CZE_communism_true_bourgeois_revolution
+				}
+				swap_ideas = {
+					remove_idea = CZE_communism_bourgeois_2
+					add_idea = CZE_communism_bourgeois_2_accelerate
+				}
+				custom_effect_tooltip = communism_accelerationism_tooltip_bourgeois
+			}
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							has_completed_focus = CZE_communism_student_skodism
+							has_completed_focus = CZE_communism_true_bourgeois_revolution
+						}
+					}
+				}
+				swap_ideas = {
+					remove_idea = CZE_communism_student_leaders
+					add_idea = CZE_communism_student_leaders_accelerate
+				}
+				custom_effect_tooltip = communism_accelerationism_tooltip
+			}
+		}
+	}
+
 	#Authoritarian
 	focus = {
 		id = CZE_politics_end_z_conspiracy
 		icon = GFX_focus_YUG_zmaj
-		x = 26
+		x = 25
 		y = 1
 		cost = 5
 		available_if_capitulated = yes
@@ -1052,7 +1188,7 @@ focus_tree = {
 	focus = {
 		id = CZE_corporate_reward_loyalty
 		icon = GFX_goal_generic_improve_relations
-		x = 25
+		x = 24
 		y = 2
 		cost = 5
 		available_if_capitulated = yes
@@ -1075,7 +1211,7 @@ focus_tree = {
 	focus = {
 		id = CZE_corporate_punish_rebels
 		icon = GFX_goal_generic_political_pressure
-		x = 27
+		x = 26
 		y = 2
 		cost = 5
 		available_if_capitulated = yes
@@ -1098,7 +1234,7 @@ focus_tree = {
 	focus = {
 		id = CZE_corporate_new_business_leaders
 		icon = GFX_goal_generic_construct_mil_factory
-		x = 26
+		x = 25
 		y = 3
 		cost = 5
 		available_if_capitulated = yes
@@ -1143,7 +1279,7 @@ focus_tree = {
 	focus = {
 		id = CZE_final_end_to_z
 		icon = GFX_goal_generic_attack_allies
-		x = 26
+		x = 25
 		y = 6
 		cost = 20
 		available_if_capitulated = yes
@@ -1182,9 +1318,8 @@ focus_tree = {
 			factor = 0
 		}
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = CZE_politics_skodism_fascism_trigger
-				has_country_flag = fascist_CZE
+			OR = {
+				has_completed_focus = CZE_eliminate_local_autonomy
 			}
 		}
 		completion_reward = {
@@ -1213,7 +1348,7 @@ focus_tree = {
 
 		}
 		completion_reward = {
-			hidden_effect = {
+			#hidden_effect = {
 				set_technology = {
 				    mobile_warfare = 1
 				    superior_firepower = 1
@@ -1221,14 +1356,14 @@ focus_tree = {
 				    mass_assault = 1
 				    popup = yes # default is yes. if set to no, no pop up will display for player
 				}
-			}
+			#}
 			custom_effect_tooltip = CZE_militia_free_rifle_groups_tooltip
 		}
 	}
 	focus = {
 		id = CZE_militia_autonomy_mass_assault_loose_command_structure
 		icon = GFX_focus_prc_infiltration
-		x = 56
+		x = 62
 		y = 2
 		cost = 20
 		available_if_capitulated = yes
@@ -1253,7 +1388,7 @@ focus_tree = {
 	focus = {
 		id = CZE_militia_autonomy_mass_assault_unleash_all_forces
 		icon = GFX_focus_usa_focus_on_europe
-		x = 56
+		x = 62
 		y = 3
 		cost = 20
 		available_if_capitulated = yes
@@ -1272,7 +1407,7 @@ focus_tree = {
 			    uses = 3
 			    category = cat_mass_assault
 			}
-			add_threat = 200
+			add_threat = 10
 			swap_ideas = {
 				remove_idea = CZE_militia_autonomy_mass_assault_loose_command_structure_idea_1
 				add_idea = CZE_militia_autonomy_mass_assault_loose_command_structure_idea_2
@@ -1281,8 +1416,8 @@ focus_tree = {
 	}
 	focus = {
 		id = CZE_militia_autonomy_mass_assault_eliminate_nap
-		icon = GFX_focus_usa_focus_on_europe
-		x = 56
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		x = 62
 		y = 4
 		cost = 20
 		available_if_capitulated = yes
@@ -1308,6 +1443,251 @@ focus_tree = {
 			}
 		}
 	}
+	focus = {
+		id = CZE_militia_autonomy_grand_battle_plan_broad_plan_companies
+		icon = GFX_focus_generic_military_academy
+		x = 60
+		y = 2
+		cost = 20
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 0
+		}
+		prerequisite = {
+			focus = CZE_militia_free_rifle_groups
+		}
+		available = {
+
+		}
+		completion_reward = {
+			add_tech_bonus = {
+			    bonus = 1
+			    uses = 2
+			    category = cat_grand_battle_plan
+			}
+			add_ideas = CZE_militia_autonomy_grand_battle_plan_broad_plan_companies_idea_1
+		}
+	}
+	focus = {
+		id = CZE_militia_autonomy_grand_battle_plan_seperate_army_and_government
+		icon = GFX_goal_generic_military_deal
+		x = 60
+		y = 3
+		cost = 20
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 0
+		}
+		prerequisite = {
+			focus = CZE_militia_autonomy_grand_battle_plan_broad_plan_companies
+		}
+		available = {
+			has_political_power > 299
+		}
+		completion_reward = {
+			add_tech_bonus = {
+			    bonus = 1
+			    uses = 3
+			    category = cat_grand_battle_plan
+			}
+			add_political_power = -300
+			swap_ideas = {
+				remove_idea = CZE_militia_autonomy_grand_battle_plan_broad_plan_companies_idea_1
+				add_idea = CZE_militia_autonomy_grand_battle_plan_broad_plan_companies_idea_2
+			}
+		}
+	}
+	focus = {
+		id = CZE_militia_autonomy_grand_battle_plan_plan_of_chaos
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 60
+		y = 4
+		cost = 20
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 0
+		}
+		prerequisite = {
+			focus = CZE_militia_autonomy_grand_battle_plan_seperate_army_and_government
+		}
+		available = {
+			#has_political_power > 299
+		}
+		completion_reward = {
+			add_tech_bonus = {
+			    bonus = 1
+			    uses = 4
+			    category = cat_grand_battle_plan
+			}
+			swap_ideas = {
+				remove_idea = CZE_militia_autonomy_grand_battle_plan_broad_plan_companies_idea_2
+				add_idea = CZE_militia_autonomy_grand_battle_plan_broad_plan_companies_idea_3
+			}
+		}
+	}
+	focus = {
+		id = CZE_militia_autonomy_superior_firepower_luxury_equipment
+		icon = GFX_focus_CZE_military_research_institute
+		x = 58
+		y = 2
+		cost = 20
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 0
+		}
+		prerequisite = {
+			focus = CZE_militia_free_rifle_groups
+		}
+		available = {
+
+		}
+		completion_reward = {
+			add_tech_bonus = {
+			    bonus = 1
+			    uses = 2
+			    category = cat_superior_firepower
+			}
+			add_ideas = CZE_militia_autonomy_superior_firepower_luxury_equipment_1
+		}
+	}
+	focus = {
+		id = CZE_militia_autonomy_superior_firepower_high_variety
+		icon = GFX_focus_generic_combined_arms
+		x = 58
+		y = 3
+		cost = 20
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 0
+		}
+		prerequisite = {
+			focus = CZE_militia_autonomy_superior_firepower_luxury_equipment
+		}
+		available = {
+
+		}
+		completion_reward = {
+			add_tech_bonus = {
+			    bonus = 1
+			    uses = 3
+			    category = cat_superior_firepower
+			}
+			swap_ideas = {
+				remove_idea = CZE_militia_autonomy_superior_firepower_luxury_equipment_1
+				add_idea = CZE_militia_autonomy_superior_firepower_luxury_equipment_2
+			}
+		}
+	}
+	focus = {
+		id = CZE_militia_autonomy_superior_firepower_unleash_all_firepower
+		icon = GFX_focus_generic_tank_production
+		x = 58
+		y = 4
+		cost = 20
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 0
+		}
+		prerequisite = {
+			focus = CZE_militia_autonomy_superior_firepower_high_variety
+		}
+		available = {
+
+		}
+		completion_reward = {
+			add_tech_bonus = {
+			    bonus = 1
+			    uses = 4
+			    category = cat_superior_firepower
+			}
+			swap_ideas = {
+				remove_idea = CZE_militia_autonomy_superior_firepower_luxury_equipment_2
+				add_idea = CZE_militia_autonomy_superior_firepower_luxury_equipment_3
+			}
+		}
+	}
+	focus = {
+		id = CZE_militia_autonomy_mobile_warfare_flexible_movement
+		icon = GFX_goal_generic_army_motorized
+		x = 56
+		y = 2
+		cost = 20
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 0
+		}
+		prerequisite = {
+			focus = CZE_militia_free_rifle_groups
+		}
+		available = {
+
+		}
+		completion_reward = {
+			add_tech_bonus = {
+			    bonus = 1
+			    uses = 2
+			    category = cat_mobile_warfare
+			}
+			add_ideas = CZE_militia_autonomy_mobile_warfare_flexible_movement_1
+		}
+	}
+	focus = {
+		id = CZE_militia_autonomy_mobile_warfare_rapid_tactical_encirclements
+		icon = GFX_goal_generic_position_armies
+		x = 56
+		y = 3
+		cost = 20
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 0
+		}
+		prerequisite = {
+			focus = CZE_militia_autonomy_mobile_warfare_flexible_movement
+		}
+		available = {
+
+		}
+		completion_reward = {
+			add_tech_bonus = {
+			    bonus = 1
+			    uses = 3
+			    category = cat_mobile_warfare
+			}
+			swap_ideas = {
+				remove_idea = CZE_militia_autonomy_mobile_warfare_flexible_movement_1
+				add_idea = CZE_militia_autonomy_mobile_warfare_flexible_movement_2
+			}
+		}
+	}
+	focus = {
+		id = CZE_militia_autonomy_mobile_warfare_the_war_feeds_itself
+		icon = GFX_goal_generic_attack_allies
+		x = 56
+		y = 4
+		cost = 20
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 0
+		}
+		prerequisite = {
+			focus = CZE_militia_autonomy_mobile_warfare_rapid_tactical_encirclements
+		}
+		available = {
+
+		}
+		completion_reward = {
+			add_tech_bonus = {
+			    bonus = 1
+			    uses = 4
+			    category = cat_mobile_warfare
+			}
+			swap_ideas = {
+				remove_idea = CZE_militia_autonomy_mobile_warfare_flexible_movement_2
+				add_idea = CZE_militia_autonomy_mobile_warfare_flexible_movement_3
+			}
+		}
+	}
+
 
 	focus = {
 		id = test_time_boyos

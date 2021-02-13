@@ -18,7 +18,7 @@ ideas = {
 				send_volunteers_tension = -2
 				send_volunteer_divisions_required = -2
 				send_volunteer_size = 1000
-				trade_opinion_factor = 10
+				#trade_opinion_factor = 10
 				join_faction_tension = 10
 				generate_wargoal_tension = -2
 				guarantee_tension = -2
@@ -650,7 +650,7 @@ ideas = {
 				always = yes
 			}
 
-			picture = FRA_matignon_agreements
+			picture = fra_matignon_agreements
 
 			removal_cost = -1
 
@@ -725,7 +725,7 @@ ideas = {
 				always = yes
 			}
 
-			picture = FRA_scw_intervention_republicans_focus
+			picture = fra_scw_intervention_republicans_focus
 
 			removal_cost = -1
 
@@ -877,9 +877,108 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				operative_slot = 1
+				research_speed_factor = 0.025
 			}
 		}
+		CZE_communism_student_leaders_accelerate = {
+			allowed = {
+				original_tag = CZE
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = eng_spirit_of_the_industrial_revolution
+
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.025
+				stability_weekly = -0.01
+				drift_defence_factor = -1
+			}
+		}
+		CZE_communism_student_leaders_2 = {
+			allowed = {
+				original_tag = CZE
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = eng_spirit_of_the_industrial_revolution
+
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+		CZE_communism_student_leaders_2_accelerate = {
+			allowed = {
+				original_tag = CZE
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = eng_spirit_of_the_industrial_revolution
+
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.1
+				stability_weekly = -0.01
+				drift_defence_factor = -1
+			}
+		}
+		CZE_communism_bourgeois_2 = {
+			allowed = {
+				original_tag = CZE
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = eng_spirit_of_the_industrial_revolution
+
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.025
+				production_speed_buildings_factor = 0.15
+			}
+		}
+		CZE_communism_bourgeois_2_accelerate = {
+			allowed = {
+				original_tag = CZE
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = eng_spirit_of_the_industrial_revolution
+
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.025
+				production_speed_buildings_factor = 0.25
+				stability_weekly = -0.01
+				drift_defence_factor = -1
+			}
+		}
+
 
 		# Army/Navy/Airforce Ideas
 
@@ -943,6 +1042,193 @@ ideas = {
 				enemy_justify_war_goal_time = -10
 				stability_factor = -0.15
 				monthly_population = -0.05
+			}
+		}
+		CZE_militia_autonomy_grand_battle_plan_broad_plan_companies_idea_1 = {
+			allowed = {
+				original_tag = CZE
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = fra_national_mobilization_focus
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.05
+				planning_speed = -0.1
+			}
+		}
+		CZE_militia_autonomy_grand_battle_plan_broad_plan_companies_idea_2 = {
+			allowed = {
+				original_tag = CZE
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = fra_national_mobilization_focus
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.2
+				planning_speed = -0.1
+				political_power_factor = -0.1
+			}
+		}
+		CZE_militia_autonomy_grand_battle_plan_broad_plan_companies_idea_3 = {
+			allowed = {
+				original_tag = CZE
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = fra_national_mobilization_focus
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.2
+				planning_speed = -0.25
+				political_power_factor = -0.1
+				army_org_factor = -0.2
+			}
+		}
+		CZE_militia_autonomy_superior_firepower_luxury_equipment_1 = {
+			allowed = {
+				original_tag = CZE
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_acquire_tanks
+
+			removal_cost = -1
+
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.05
+				production_factory_max_efficiency_factor = -0.05
+				industrial_capacity_factory = -0.1
+			}
+		}
+		CZE_militia_autonomy_superior_firepower_luxury_equipment_2 = {
+			allowed = {
+				original_tag = CZE
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_acquire_tanks
+
+			removal_cost = -1
+
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.1
+				production_factory_max_efficiency_factor = -0.05
+				industrial_capacity_factory = -0.1
+				production_factory_start_efficiency_factor = -0.1
+				production_lack_of_resource_penalty_factor = 0.25
+			}
+		}
+		CZE_militia_autonomy_superior_firepower_luxury_equipment_3 = {
+			allowed = {
+				original_tag = CZE
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_acquire_tanks
+
+			removal_cost = -1
+
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.1
+				production_factory_max_efficiency_factor = -0.15
+				industrial_capacity_factory = -0.2
+				production_factory_start_efficiency_factor = -0.1
+				production_lack_of_resource_penalty_factor = 0.25
+				political_power_cost = 0.5
+			}
+		}
+		CZE_militia_autonomy_mobile_warfare_flexible_movement_1 = {
+			allowed = {
+				original_tag = CZE
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_acquire_tanks
+
+			removal_cost = -1
+
+			modifier = {
+				max_command_power = -25
+			}
+		}
+		CZE_militia_autonomy_mobile_warfare_flexible_movement_2 = {
+			allowed = {
+				original_tag = CZE
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_acquire_tanks
+
+			removal_cost = -1
+
+			modifier = {
+				max_command_power = -50
+				experience_loss_factor = 0.25
+				army_morale_factor = -0.15
+				attrition = 0.25
+			}
+		}
+		CZE_militia_autonomy_mobile_warfare_flexible_movement_3 = {
+			allowed = {
+				original_tag = CZE
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_acquire_tanks
+
+			removal_cost = -1
+
+			modifier = {
+				max_command_power = -50
+				experience_loss_factor = 0.25
+				army_morale_factor = -0.15
+				attrition = 0.5
+				army_leader_cost_factor = 0.5
+				equipment_capture_factor = 0.75
 			}
 		}
 	}

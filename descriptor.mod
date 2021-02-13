@@ -5,4 +5,4 @@ tags={
 	"National Focuses"
 }
 name="Skodist Czechoslovakia"
-supported_version="1.9.2"
+supported_version="1.10.*"

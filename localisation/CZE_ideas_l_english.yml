@@ -9,7 +9,7 @@
  CZE_just_fuck_me_up_fam_army:0 "Military Legacy of the Skodist Revolution"
  CZE_just_fuck_me_up_fam_army_desc:0 "Despite the equipment and profesionalization of the Czechoslovakian army, we won the revolution on the backs of state militias, private armies, and support from the population. As such, the current Skodist army is a botched together mess of irregulars and political leaders, with little care for army cohesion or consistent structure. The army is loyal, however, and constantly willing to defend the revolution, aside from a handful of authoritarian radicals. Serious reforms need to be undertaken to fix the army and get it into a proper fighting mode, once the poltical will becomes generated to do so."
  CZE_regional_autonomy_start:0 "Regional Autonomy"
- CZE_regional_autonomy_start_desc:0 "In order to succeed in the Revolution, autonomous rights were offered to the individual regions of Czechoslovakian, especially in Slovakia, to the point where the previous Slovak government has never relinquished its authority, but merely governs with the Council's permission. While mocked as positively feudal, this presents a serious problem for the Council, in which the Skodist potential of the country is hampered by petty poiticians and local regulations. Clamping down on these rights would be fairly easy, though the backlash could be immense, and some propose we just negotiate to get them removed, even if that would take longer."
+ CZE_regional_autonomy_start_desc:0 "In order to succeed in the Revolution, autonomous rights were offered to the individual regions of Czechoslovakia, especially in Slovakia, to the point where the previous Slovak government has never relinquished its authority, but merely governs with the Council's permission. While mocked as positively feudal, this presents a serious problem for the Council, in which the Skodist potential of the country is hampered by petty poiticians and local regulations. Clamping down on these rights would be fairly easy, though the backlash could be immense, and some propose we just negotiate to get them removed, even if that would take longer."
  CZE_regional_autonomy_crushed:0 "Regional Autonomy Crushed"
  CZE_regional_autonomy_crushed_desc:0 "As part of our Skodist revolution, the autonomous regions of Czechoslovakia have been eliminated, and local laws reformed to become more compatable with Skodism. While there has been resistance by local leaders and agitators, most of Czechoslovakia seems to have accepted our demands for the sake of the revolution. Our regime is now ascendent throughout Czechoslovakia, however some in the Council worry about our heavy-handed actions, especially those in the libertarian wing. Others worry if the anger is bigger than it seems, and are prepared to take over the government should things turn out not so stable as was originally perceived."
  CZE_regional_autonomy_z_conspiracy:0 "The Z Conspiracy"
@@ -77,8 +77,25 @@
  CZE_fascism_decreasing_libertarian_influence_desc:0 "We have sent the paramilitaries to hunt down members of the Original Revolutionaries, both undermining the Z Conspiracy and allowing our political faction to gain more influence throughout the country. Our grip on the country is starting to increase, and the revolution may soon well be completed."
  #Communism
  CZE_communism_student_leaders:0 "Student Skodism"
+ CZE_communism_student_leaders_accelerate:0 "Student Skodism"
+ CZE_communism_student_leaders_2:0 "Student Skodism"
+ CZE_communism_student_leaders_2_accelerate:0 "Student Skodism"
+ CZE_communism_bourgeois_2:0 "Borgeois Skodism"
+ CZE_communism_bourgeois_2_accelerate:0 "Borgeois Skodism"
 
  #Army/Navy/Airforce
  CZE_militia_autonomy_mass_assault_loose_command_structure_idea_1:0 "Loose Command Structure"
  CZE_militia_autonomy_mass_assault_loose_command_structure_idea_2:0 "Unleash All Forces"
  CZE_militia_autonomy_mass_assault_loose_command_structure_idea_3:0 "Violate The Non-Aggression Principle"
+
+ CZE_militia_autonomy_grand_battle_plan_broad_plan_companies_idea_1:0 "Broad Plan Companies"
+ CZE_militia_autonomy_grand_battle_plan_broad_plan_companies_idea_2:0 "Seperate Army And Government"
+ CZE_militia_autonomy_grand_battle_plan_broad_plan_companies_idea_3:0 "Plan Of Chaos"
+
+ CZE_militia_autonomy_superior_firepower_luxury_equipment_1:0 "Proliferation Of Luxury Equipment"
+ CZE_militia_autonomy_superior_firepower_luxury_equipment_2:0 "High Diversity Army Luxuries"
+ CZE_militia_autonomy_superior_firepower_luxury_equipment_3:0 "Unleash All Firepower"
+
+ CZE_militia_autonomy_mobile_warfare_flexible_movement_1:0 "Increased Divisional Flexibility"
+ CZE_militia_autonomy_mobile_warfare_flexible_movement_2:0 "Rapid Tactical Encirclements"
+ CZE_militia_autonomy_mobile_warfare_flexible_movement_3:0 "The War Feeds Itself"

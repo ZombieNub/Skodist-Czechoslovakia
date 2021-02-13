@@ -314,3 +314,48 @@ country_event = {
 		set_country_flag = CZE_fascism_vanguards_and_officers
 	}
 }
+
+country_event = {
+	id = skodism.12 # Student Skodism
+	title = skodism.12.t
+	desc = skodism.12.d
+
+	picture = GFX_report_event_generic_parliament
+
+	is_triggered_only = yes
+
+	option = {
+		name = skodism.12.a
+	}
+}
+
+country_event = {
+	id = skodism.13 # True Bourgeios Revolution
+	title = skodism.13.t
+	desc = skodism.13.d
+
+	picture = GFX_report_event_gathering_protest
+
+	is_triggered_only = yes
+
+	option = {
+		name = skodism.13.a
+	}
+}
+
+country_event = {
+	id = skodism.14 # Z Unions Oppose Centralization
+	title = skodism.14.t
+	desc = skodism.14.d
+
+	picture = GFX_report_event_ast_transfer_singapore
+
+	is_triggered_only = yes
+
+	option = {
+		name = skodism.14.a
+		add_stability = -0.05
+		add_political_power = -25
+		custom_effect_tooltip = tooltip_event_14
+	}
+}

@@ -47,6 +47,7 @@
 
   tooltip_rework_heavy_industry:0 "Increase local resources and max factory slots in states you control at the cost of §Y50 £pol_power  Political Power.§!\n\n"
   tooltip_eliminate_local_autonomy:0 "§RThe populaiton of Czechoslovakia enjoy their autonomy, and this action may have dire consequences.§!"
+  tooltip_initial_corporatism:0 "\n§RNot everybody agrees with this economic model...§!"
 
   #POLITICS
   #fascism
@@ -58,7 +59,7 @@
   CZE_out_with_anarchists:0 "The Fantasy Revolution"
   CZE_out_with_anarchists_desc:0 "The libertarian breakaways may claim to be the true revolution, however they are merely the angry dying spasms of anarchism corrupted into a civilian form. Their name, the \"Original Revolutionaries\" is nothing but a farce, and only portrays hubris. Its time to end this vestigial faction, and with the paramilitaries on our side, they won't have a chance!"
   CZE_the_moscow_plot:0 "The Moscow Plot"
-  CZE_the_moscow_plot_desc:0 "At last, the elite faction and its recalcitrant student unions has been revealed for what they truly are. Documents uncovered by our paramilitaries reveal a terrible story: The Z unions, student unions, and members of the USUS have all been taking bribes from the Soviet Union to undermine the revolution. We must redouble our efforts and crush these elites, lest they launch their revolution tomorrow!"
+  CZE_the_moscow_plot_desc:0 "At last, the elite faction and its recalcitrant student unions has been revealed for what they truly are. Documents uncovered by our paramilitaries reveal a terrible story. The Z unions, student unions, and members of the USUS have all been taking bribes from the Soviet Union to undermine the revolution. We must redouble our efforts and crush these elites, lest they launch their revolution tomorrow!"
   CZE_fascism_utilize_universities:0 "Utilize The Universities"
   CZE_fascism_utilize_universities_desc:0 "As much as they are hotbeads of socialism, the greatest thought in the fields of weaponry, tactics, markets, and even Skodism came from the universities. It would be drastically unwise to abandon these great instiutions, though we should no longer hold them in public hands. We must privatize them and keep a close eye using the paramilitary groups, though this may prevent great innovations."
   CZE_fascism_empower_paramilitaries:0 "Private Peacekeepers"
@@ -83,9 +84,20 @@
   CZE_fascism_the_global_market:0 "The Global Market"
   CZE_fascism_the_global_market_desc:0 "The world is filled to the brim with luxuries just waiting to be purchased, but the selfish desires of the mercantilists and communists wish to keep these all to themselves. Enough of this petty greed! Enough of this waste of luxuries! It is the duty of our militias and paramilitaries to march forth, and spread the Skodist market all across the world!"
   CZE_fascism_the_global_market_tooltip:0 "Enables influencing states within our territory that border our cores, allowing us to turn them into our cores."
+
+  #communism
   CZE_politics_skodism_communism:0 "End Fascist Paramilitaries"
   CZE_politics_skodism_communism_desc:0 "The Paramilitaries that so helpfuly aided us back when the revolution was beginning are now turning against the government to justify their own existance. This betrayal of skodism shall not stand! Henceforth, fascist elements across Czechoslovakia are to be elminated, and we are to begin the Skodist Revolution in full!"
   CZE_politics_skodism_communism_trigger:0 "§RParamilitaries crushed by Student Groups§!"
+  CZE_communism_student_skodism:0 "Student Skodism"
+  CZE_communism_student_skodism_desc:0 "Skodism is a unique doctrine, born out of the university. Advanced economic theories combined with new political doctrines made it an ideology understandable by only few. As such, the common citizen and bueracrat is unprepared to implement Skodism to it's fullest extent. It is necessary for us, the student groups, to take charge of the Skodist revolution, and fight for the people in full!"
+  CZE_communism_true_bourgeois_revolution:0 "The True Bourgeios Revolution"
+  CZE_communism_true_bourgeois_revolution_desc:0 "The consenus around the Marxist theory of historical materialism is an incomplete farce. It falsely determines that the French Revolution is the Bourgeios Revolution that precedes the Socialist Revolution. Instead, the French Revolution was the Liberal Revolution, and the Bourgeios revolution has yet to come, at least, until now."
+  CZE_communism_embrace_accelerationism:0 "Embrace Accelerationism"
+  CZE_communism_embrace_accelerationism_desc:0 "Our society is one of experimentation. Of progress! Our intent is clear, and our cause is just. All the world shall embrace us once we have done our duty. And to achieve our ultimate ends, we must §Raccelerate!§! §YAccelerate!§! §GACCELERATE!§!"
+  communism_accelerationism_tooltip:0 "Depending on our ideological direction, we may get a §Yresearch speed§! or §Yconstruction speed§! bonus."
+  communism_accelerationism_tooltip_student:0 "Depending on our ideological direction, we may get a §Gresearch speed§! or §Yconstruction speed§! bonus."
+  communism_accelerationism_tooltip_bourgeois:0 "Depending on our ideological direction, we may get a §Yresearch speed§! or §Gconstruction speed§! bonus."
 
   #authoritarianism
   CZE_politics_end_z_conspiracy:0 "End The Z Conspiracy"
@@ -113,3 +125,21 @@
   CZE_militia_autonomy_mass_assault_unleash_all_forces_desc:0 "Our armies are restless, intensely motivated, and ready to defend the revolution at all costs. When the cards are down, they must be ready and able to fight any opposing nation that dares threaten our existance. It's time to unleash all our forces, and remove any and all obligations and rules of warfare from our armies!"
   CZE_militia_autonomy_mass_assault_eliminate_nap:0 "Violate The Non-Aggression Principle"
   CZE_militia_autonomy_mass_assault_eliminate_nap_desc:0 "There is only one restriction left on the divisions, and that is the murder, intentional or unintentional, of citizens inside or outside the revolution. It's time to remove this restriction and give our troops full ability to operate as they please!"
+  CZE_militia_autonomy_grand_battle_plan_broad_plan_companies:0 "Broad Plan Companies"
+  CZE_militia_autonomy_grand_battle_plan_broad_plan_companies_desc:0 "Our current militia system faces the problem of bueracracy. The officer class, throughout history, has built itself on the princple of being the best and brightest in planning and command, and it's becoming no less true in the face of Skodism. Luckily, the Skodist model has an in-built solution, The free market!"
+  CZE_militia_autonomy_grand_battle_plan_seperate_army_and_government:0 "Seperate Army And Government"
+  CZE_militia_autonomy_grand_battle_plan_seperate_army_and_government_desc:0 "It has proven rather tempting for the current government to meddle in the affairs of the militias, to the point of acting like the old general-politician structure that plagued both sides of the Russian Civil War. This must be brought to a swift close, the government has no right to interfere with the militas as they do any other free company!"
+  CZE_militia_autonomy_grand_battle_plan_plan_of_chaos:0 "Plan Of Chaos"
+  CZE_militia_autonomy_grand_battle_plan_plan_of_chaos_desc:0 "The old structure of war required the entire army, arranged from top to bottom, to act in line with a grand plan. This is a rather fragile setup, as it's resistant to changes in the field and is susceptible to decay. Instead of clinging on so desperately to order to run our army, we shall embrace the chaos of war! Every militia shall act as their own with their own as they see fit, and form the plan of chaos!"
+  CZE_militia_autonomy_superior_firepower_luxury_equipment:0 "Luxury Equipment"
+  CZE_militia_autonomy_superior_firepower_luxury_equipment_desc:0 "What makes one rifle different from another? Too many factors must be considered before one can render judgement as to which rife is best. Thankfully, the free market provides us with an easy solution! We must allow any and all of our infantry to purchase any equipment they wish to use personally!"
+  CZE_militia_autonomy_superior_firepower_high_variety:0 "High Variety Equipment"
+  CZE_militia_autonomy_superior_firepower_high_variety_desc:0 "The war is a perfect experimenting ground for determing the quality of equipment, but not every situation is equal. They all call for different tactics, different men, and different equipment. The militias must purchase a high diversity of equipment, in order to allow all situations to be accounted for."
+  CZE_militia_autonomy_superior_firepower_unleash_all_firepower:0 "Unleash All Firepower"
+  CZE_militia_autonomy_superior_firepower_unleash_all_firepower_desc:0 "We are ready to take on the world. Our troops are well fed, well supplied, and well armed. We are ready for any fighting situation, and nothing can stop us!"
+  CZE_militia_autonomy_mobile_warfare_flexible_movement:0 "Increase Divisional Flexibility"
+  CZE_militia_autonomy_mobile_warfare_flexible_movement_desc:0 "Now that we have decoupled governmental responsibility over the military, we must now decouple the responsibility of the generals. We must eliminate the archaic models of generals commanding divisions and make the first steps towards autonomous divions."
+  CZE_militia_autonomy_mobile_warfare_rapid_tactical_encirclements:0 "Rapid Tactical Encirclements"
+  CZE_militia_autonomy_mobile_warfare_rapid_tactical_encirclements_desc:0 "Our divsions are beginning to show greater amounts of initiative, finding holes in the enemy line and achieving glorious breakthroughs. Yet, the more daring operations are being restriced by callous and backwards officers. The divisions must do away with these powermongers, and use their fresh autonomy to gain tatical superiority."
+  CZE_militia_autonomy_mobile_warfare_the_war_feeds_itself:0 "The War Feeds Itself"
+  CZE_militia_autonomy_mobile_warfare_the_war_feeds_itself_desc:0 "An old mantra from the Roman Empire, brought back to life during the French revolution. The army is becoming more and more autonomous, and has yielded a new problem. Their riskier plans and abilities are becoming less and less economically viable. We must institute a change in plan. Let the divisions scavange from the population and steal weaponry to maintain the initiative. The war feeds itself!"

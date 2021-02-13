@@ -300,6 +300,7 @@ CZE_state_skodism = {
 			FROM = {
 				add_core_of = CZE
 			}
+			add_stability = -0.05
 		}
 	}
 }
