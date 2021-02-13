@@ -47,7 +47,7 @@
 
   tooltip_rework_heavy_industry:0 "Increase local resources and max factory slots in states you control at the cost of §Y50 £pol_power  Political Power.§!\n\n"
   tooltip_eliminate_local_autonomy:0 "§RThe populaiton of Czechoslovakia enjoy their autonomy, and this action may have dire consequences.§!"
-  tooltip_initial_corporatism:0 "\n§RNot everybody agrees with this economic model...§!"
+  tooltip_initial_corporatism:0 "\n§RNot everybody agrees with this economic model.§!"
 
   #POLITICS
   #fascism
