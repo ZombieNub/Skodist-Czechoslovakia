@@ -1239,6 +1239,31 @@ focus_tree = {
 			}
 		}
 	}
+	focus = {
+		id = CZE_communism_student_skodism_beacon_of_student_skodism
+		icon = GFX_focus_generic_soviet_politics
+		x = 28
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = CZE_communism_student_skodism_avant_garde_intelligentsia
+		}
+		prerequisite = {
+			focus = CZE_communism_student_skodism_elitist_economics
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			hidden_effect = {
+				remove_ideas = CZE_corporate_consumerism_student_skodism
+				remove_ideas = CZE_communism_student_leaders_3_accelerate
+			}
+			custom_effect_tooltip = CZE_communism_student_skodism_beacon_of_student_skodism_tooltip
+			add_ideas = CZE_communism_student_leaders_final
+		}
+	}
 
 	#Authoritarian
 	focus = {
