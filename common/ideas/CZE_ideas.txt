@@ -978,6 +978,29 @@ ideas = {
 				drift_defence_factor = -1
 			}
 		}
+		CZE_corporate_consumerism_student_skodism = {
+			allowed = {
+				original_tag = CZE
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_foreign_capital
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.25
+				production_factory_start_efficiency_factor = 0.25
+				production_factory_efficiency_gain_factor = 0.10
+				production_factory_max_efficiency_factor = 0.25
+				local_resources_factor = 0.25
+				local_building_slots_factor = 0.4
+			}
+		}
 		CZE_communism_bourgeois_2 = {
 			allowed = {
 				original_tag = CZE
