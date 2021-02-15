@@ -436,8 +436,8 @@ focus_tree = {
 				}
 				add_building_construction = {type = industrial_complex level = 2 instant_build = yes}
 				damage_building = {type = industrial_complex damage = 2}
-				add_building_construction = {type = arms_factory level = 2 instant_build = yes}
-				damage_building = {type = arms_factory damage = 2}
+				add_building_construction = {type = arms_factory level = 1 instant_build = yes}
+				damage_building = {type = arms_factory damage = 1}
 			}
 			add_ideas= CZE_corporate_railroads
 		}
@@ -1394,11 +1394,13 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
+				damage_building = {type = industrial_complex damage = 0.5}
 				add_building_construction = {
 					type = arms_factory
 					level = 1
 					instant_build = yes
 				}
+				damage_building = {type = arms_factory damage = 0.5}
 				add_compliance = 20
 			}
 			add_timed_idea = { idea = CZE_temp_economic_investment days = 180 }
