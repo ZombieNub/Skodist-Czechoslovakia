@@ -1175,6 +1175,31 @@ focus_tree = {
 				}
 				custom_effect_tooltip = communism_accelerationism_tooltip
 			}
+			custom_effect_tooltip = communism_accelerationism_banks_tooltip
+		}
+	}
+	focus = {
+		id = CZE_communism_partisan_crusade
+		icon = GFX_focus_usa_voter_registration_act
+		x = 30
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = CZE_communism_embrace_accelerationism
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity= {
+				ideology = communism
+				popularity = 0.1
+			}
+			swap_ideas = {
+				remove_idea = CZE_politics_are_fucked
+				add_idea = CZE_communism_anti_partisan_system
+			}
 		}
 	}
 	focus = {

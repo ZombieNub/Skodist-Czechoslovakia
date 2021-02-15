@@ -905,6 +905,26 @@ ideas = {
 				drift_defence_factor = -1
 			}
 		}
+		CZE_communism_anti_partisan_system = {
+			allowed = {
+				original_tag = CZE
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = eng_spirit_of_the_industrial_revolution
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.25
+				drift_defence_factor = -1
+				communism_drift = 1
+			}
+		}
 		CZE_communism_student_leaders_2 = {
 			allowed = {
 				original_tag = CZE
