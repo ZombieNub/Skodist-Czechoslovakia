@@ -10,3 +10,11 @@ CZE_fascism_internal_politics = {
 		tag = CZE
 	}
 }
+CZE_economic_clock = {
+	icon = generic_prospect_for_resources
+	available = {
+		tag = CZE
+		has_completed_focus = CZE_corporate_consumerism_2
+	}
+	visible_when_empty = true
+}

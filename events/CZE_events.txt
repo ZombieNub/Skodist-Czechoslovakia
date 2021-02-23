@@ -359,3 +359,44 @@ country_event = {
 		custom_effect_tooltip = tooltip_event_14
 	}
 }
+
+country_event = {
+	id = skodism.15 # Economic Catastrophe
+	title = skodism.15.t
+	desc = skodism.15.d
+
+	picture = GFX_report_event_generic_strike
+
+	is_triggered_only = yes
+
+	option = {
+		name = skodism.15.a
+		add_ideas = CZE_corporate_consumerism_crash
+	}
+	option = {
+		name = skodism.15.b
+		trigger = {
+			has_completed_focus = CZE_politics_skodism_fascism
+		}
+		add_stability = -0.1
+		add_war_support = 0.3
+		add_ideas = CZE_corporate_consumerism_crash
+		custom_effect_tooltip = tooltip_corporate_consumerism_crash_fascism
+	}
+	option = {
+		name = skodism.15.c
+		trigger = {
+			has_completed_focus = CZE_politics_skodism_communism
+		}
+		add_ideas = CZE_corporate_consumerism_crash
+		add_popularity= {
+			ideology = communism
+			popularity = 0.2
+		}
+		add_popularity= {
+			ideology = fascism
+			popularity = -1
+		}
+		custom_effect_tooltip = tooltip_corporate_consumerism_crash_communism
+	}
+}

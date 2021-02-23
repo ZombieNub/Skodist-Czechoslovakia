@@ -1120,6 +1120,11 @@ focus_tree = {
 			focus = CZE_communism_student_skodism
 			focus = CZE_communism_true_bourgeois_revolution
 		}
+		available = {
+			NOT = {
+				has_idea = CZE_revolution_scars
+			}
+		}
 		ai_will_do = {
 			factor = 1
 		}

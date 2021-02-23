@@ -605,6 +605,27 @@ ideas = {
 				local_building_slots_factor = 0.25
 			}
 		}
+		CZE_corporate_consumerism_crash = {
+			allowed = {
+				original_tag = CZE
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_foreign_capital
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.35
+				production_speed_buildings_factor = -0.65
+				production_factory_efficiency_gain_factor = -0.20
+				local_resources_factor = -0.35
+			}
+		}
 		CZE_corporate_railroads = {
 			allowed = {
 				original_tag = CZE
