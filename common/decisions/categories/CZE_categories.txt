@@ -14,7 +14,7 @@ CZE_economic_clock = {
 	icon = generic_prospect_for_resources
 	available = {
 		tag = CZE
-		has_completed_focus = CZE_corporate_consumerism_2
+		has_completed_focus = CZE_denounce_savings
 	}
-	visible_when_empty = true
+	visible_when_empty = yes
 }

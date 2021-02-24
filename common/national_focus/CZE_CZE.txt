@@ -1572,7 +1572,7 @@ focus_tree = {
 			    uses = 4
 			    category = cat_mass_assault
 			}
-			manpower = -25000
+			add_manpower = -25000
 			swap_ideas = {
 				remove_idea = CZE_militia_autonomy_mass_assault_loose_command_structure_idea_2
 				add_idea = CZE_militia_autonomy_mass_assault_loose_command_structure_idea_3

@@ -344,8 +344,8 @@ CZE_economic_clock = {
 			has_stability < 0.1
 		}
 		is_good = no
-		selectable_mission = yes
-		days_mission_timeout = 60
+		selectable_mission = no
+		days_mission_timeout = 30
 		timeout_effect = {
 			country_event = {
 				id = skodism.15
