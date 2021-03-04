@@ -376,17 +376,17 @@ country_event = {
 	option = {
 		name = skodism.15.b
 		trigger = {
-			has_completed_focus = CZE_politics_skodism_fascism
+			has_country_flag = fascist_CZE
 		}
-		add_stability = -0.1
-		add_war_support = 0.3
+		add_stability = 0.2
+		add_war_support = 0.5
 		add_ideas = CZE_corporate_consumerism_crash
 		custom_effect_tooltip = tooltip_corporate_consumerism_crash_fascism
 	}
 	option = {
 		name = skodism.15.c
 		trigger = {
-			has_completed_focus = CZE_politics_skodism_communism
+			has_country_flag = communist_CZE
 		}
 		add_ideas = CZE_corporate_consumerism_crash
 		add_popularity= {

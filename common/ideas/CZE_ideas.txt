@@ -48,6 +48,7 @@ ideas = {
 				industrial_capacity_factory = -0.5
 				industrial_capacity_dockyard = -0.5
 				local_resources_factor = -0.10
+				custom_modifier_tooltip = revolution_scars_tooltip
 			}
 		}
 		CZE_politics_are_fucked = {
@@ -615,7 +616,7 @@ ideas = {
 				always = yes
 			}
 
-			picture = generic_foreign_capital
+			picture = great_depression
 
 			removal_cost = -1
 

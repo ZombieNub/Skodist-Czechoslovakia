@@ -338,9 +338,10 @@ CZE_economic_clock = {
 	CZE_clock_is_ticking = {
 		allowed = { tag = CZE }
 		available = {
-			has_completed_focus = CZE_denounce_savings
+			has_stability > 0.15
 		}
 		activation = {
+			has_completed_focus = CZE_denounce_savings
 			has_stability < 0.1
 		}
 		is_good = no
